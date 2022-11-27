@@ -7,8 +7,8 @@ import Box from "./Box";
 const DocumentationCTA = () => {
   return (
     <Box
-      className="shadow-none bg-secondary
-     flex flex-col items-start relative"
+      className="hidden md:flex shadow-none bg-secondary
+     flex-col items-start relative"
     >
       <Image
         className="absolute right-0 bottom-0

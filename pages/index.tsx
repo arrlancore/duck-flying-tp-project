@@ -16,7 +16,7 @@ export default function Home() {
       <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
         <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
           {/* Sidebar */}
-          <div className="flex">
+          <div className="flex flex-col md:flex-row">
             <section
               id="sidebar"
               className="flex flex-1 flex-col max-w-[250px] w-full"

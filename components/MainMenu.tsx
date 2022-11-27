@@ -100,8 +100,8 @@ const MenuItem = ({
 const MainMenu = () => {
   const router = useRouter();
   return (
-    <nav className="mt-4">
-      <ul className="flex-1">
+    <nav className="mt-4 hidden md:block">
+      <ul>
         {menus.map((props) => (
           <li key={props.id}>
             <MenuItem {...props} isActive={router.pathname == props.to} />
