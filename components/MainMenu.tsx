@@ -103,7 +103,7 @@ const MainMenu = () => {
     <nav className="mt-4 hidden md:block">
       <ul>
         {menus.map((props) => (
-          <li key={props.id}>
+          <li className="list-none" key={props.id}>
             <MenuItem {...props} isActive={router.pathname == props.to} />
           </li>
         ))}
@@ -112,7 +112,7 @@ const MainMenu = () => {
       <h3 className="px-4 py-2 text-[12px] font-bold">ACCOUNT PAGES</h3>
       <ul className="flex-1">
         {additionalMenus.map((props) => (
-          <li key={props.id}>
+          <li className="list-none" key={props.id}>
             <MenuItem {...props} isActive={router.pathname == props.to} />
           </li>
         ))}
