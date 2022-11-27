@@ -31,7 +31,7 @@ export default function Home() {
               className="flex flex-col w-full ml-0 md:ml-10"
             >
               {/* MainContent */}
-              <Header></Header>
+              <Header />
               <Summary></Summary>
               <Hero></Hero>
               <Stats></Stats>

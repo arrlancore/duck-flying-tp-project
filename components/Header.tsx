@@ -11,7 +11,7 @@ import {
 
 const Header = () => {
   return (
-    <section className="flex px-4 justify-between">
+    <section className="flex px-4 justify-between flex-col sm:flex-row">
       <div className="flex flex-col">
         <div className="text-xs font-normal text-gray-400">
           Pages <span className="text-gray-700">/ Dashboard</span>
