@@ -28,7 +28,7 @@ export default function Home() {
 
             <section
               id="main-content"
-              className="flex flex-col w-full ml-0 sm:ml-10"
+              className="flex flex-col w-full ml-0 md:ml-10"
             >
               {/* MainContent */}
               <Header></Header>
