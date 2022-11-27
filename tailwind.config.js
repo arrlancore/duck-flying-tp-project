@@ -7,13 +7,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#00040f",
-        secondary: "#00f6ff",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
+        primary: "#F8F9FA",
+        secondary: "#4FD1C5",
+        grey400: "#A0AEC0",
+        green400: "#48BB78",
       },
       fontFamily: {
-        poppins: ["Helvetica", "sans-serif"],
+        helvetica: ["Helvetica", "sans-serif"],
       },
     },
     screens: {

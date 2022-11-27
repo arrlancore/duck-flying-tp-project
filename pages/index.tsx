@@ -1,3 +1,43 @@
+import {
+  Brand,
+  DocumentationCTA,
+  Footer,
+  Header,
+  Hero,
+  MainMenu,
+  ProjectsInfo,
+  Stats,
+  Summary,
+} from "../components";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="bg-primary w-full overflow-hidden">
+      <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
+        <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
+          {/* Sidebar */}
+          <div className="flex">
+            <section
+              id="sidebar"
+              className="flex flex-1 flex-col max-w-[250px] w-full"
+            >
+              <Brand />
+              <MainMenu></MainMenu>
+              <DocumentationCTA></DocumentationCTA>
+            </section>
+
+            <section id="main-content" className="flex flex-col ml-0 sm:ml-10">
+              {/* MainContent */}
+              <Header></Header>
+              <Summary></Summary>
+              <Hero></Hero>
+              <Stats></Stats>
+              <ProjectsInfo></ProjectsInfo>
+              <Footer></Footer>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
