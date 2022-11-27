@@ -32,8 +32,8 @@ export default function Home() {
             >
               {/* MainContent */}
               <Header />
-              <Summary></Summary>
-              <Hero></Hero>
+              <Summary />
+              <Hero />
               <Stats></Stats>
               <ProjectsInfo></ProjectsInfo>
               <Footer></Footer>

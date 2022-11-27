@@ -24,6 +24,9 @@ module.exports = {
       lg: "1200px",
       xl: "1700px",
     },
+    backgroundImage: {
+      "hero-1": "url('/image-background-1.png')",
+    },
   },
   plugins: [],
   mode: "jit",
