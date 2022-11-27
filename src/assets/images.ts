@@ -6,7 +6,7 @@ import avatar5 from "./image/Avatar5.png";
 import chakra from "./image/chakra.png";
 import documentationBackground from "./image/documentation-background.png";
 import imageBg1 from "./image/image-background-1.png";
-import lineRadarBg from "lin/imagee-radar-background.png";
+import lineRadarBg from "./image/line-radar-background.png";
 
 export {
   avatar1,

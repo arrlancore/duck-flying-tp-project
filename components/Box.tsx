@@ -7,7 +7,7 @@ const Box = ({
 }: HTMLAttributes<HTMLDivElement>) => {
   return (
     <div
-      className={`w-full bg-white p-4 rounded-[15px] shadow-md ${
+      className={`w-full bg-white p-4 rounded-[15px] shadow-sm ${
         className ?? ""
       }`}
       {...rest}

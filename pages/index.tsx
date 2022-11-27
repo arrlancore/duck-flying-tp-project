@@ -22,8 +22,8 @@ export default function Home() {
               className="flex flex-1 flex-col max-w-[250px] w-full"
             >
               <Brand />
-              <MainMenu></MainMenu>
-              <DocumentationCTA></DocumentationCTA>
+              <MainMenu />
+              <DocumentationCTA />
             </section>
 
             <section id="main-content" className="flex flex-col ml-0 sm:ml-10">
