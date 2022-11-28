@@ -11,191 +11,241 @@ import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
 import Table from "../Table";
 import Image from "next/image";
+import {
+  author1,
+  author2,
+  author3,
+  author4,
+  author6,
+} from "../../src/assets/images";
+import Text from "../Text";
+import Link from "next/link";
 
 const renderer = {
-  companyName: ([title, logo]: [string, string]) => {
+  author: ([name, email, pic]: [string, string, string]) => {
     return (
-      <div className="flex">
-        <Image className="mr-2" width={20} height={20} src={logo} alt={title} />{" "}
-        {title}
+      <div className="flex items-center">
+        <Image
+          className="rounded-2xl object-contain"
+          width="40"
+          height="40"
+          src={pic}
+          alt={name}
+        />{" "}
+        <div className="flex flex-col pl-3">
+          <div>{name}</div>
+          <Text variant="caption">{email}</Text>
+        </div>
       </div>
     );
   },
-  members: (value: string[]) => {
+  function: ([func, division]: [string, string]) => {
     return (
-      <div className="flex relative">
-        {value.map((src, idx) => (
-          <Image
-            key={idx}
-            src={src}
-            alt="member"
-            width="18"
-            height="18"
-            className="relative left-0 top-0"
-            style={{ left: idx * -8 }}
-          />
-        ))}
+      <div className="flex flex-col">
+        <div>{func}</div>
+        <Text variant="caption">{division}</Text>
       </div>
     );
   },
-  budget: (value: number) => {
-    const formatter = (n: number) => new Intl.NumberFormat().format(n);
-    return <div>{value ? `$${formatter(value)}` : "Not Set"}</div>;
-  },
-  completion: (value: number) => (
-    <div className="flex flex-col">
-      <div>{value}</div>
-      <Progress pct={value} />
+  status: (statuses: string) => (
+    <div>
+      <span
+        className={`py-2 px-4 text-white rounded-lg ${
+          statuses.toLowerCase() == "online" ? "bg-[#48BB78]" : "bg-gray-300"
+        }`}
+      >
+        {statuses}
+      </span>
     </div>
   ),
-  option: () => <OptionIcon className="ml-auto" />,
+  employed: (date: string) => new Date(date).toLocaleDateString(),
+  action: () => (
+    <Link title="Edit" href="#" className=" text-gray-500">
+      Edit
+    </Link>
+  ),
 };
 
 const projectsDataTable = {
   head: [
-    { value: "Companies" },
-    { value: "Budget" },
+    { value: "Author" },
+    { value: "Function" },
     { value: "Status" },
-    { value: "Completion" },
+    { value: "Employed" },
     { value: "" },
   ],
   body: [
     [
       {
-        key: "company",
-        value: ["Chakra Soft UI", adobeXd.src],
-        render: renderer.companyName,
+        key: "author",
+        value: ["Esthera Jackson", "esthera@simple.com", author6.src],
+        render: renderer.author,
       },
       {
-        key: "budget",
-        value: 14000,
-        render: renderer.budget,
+        key: "function",
+        value: ["Manager", "Organization"],
+        render: renderer.function,
       },
       {
         key: "status",
-        value: "Working",
+        value: "Online",
+        render: renderer.status,
       },
       {
-        key: "completion",
-        value: 60,
-        render: renderer.completion,
+        key: "employed",
+        value: "2022-11-28T10:17:44.165Z",
+        render: renderer.employed,
       },
       {
-        key: "option",
+        key: "action",
         value: "",
-        render: renderer.option,
+        render: renderer.action,
       },
     ],
     [
       {
-        key: "company",
-        value: ["Add Progress Track", atlassian.src],
-        render: renderer.companyName,
+        key: "author",
+        value: ["Alexa Liras", "alexa@simple.com", author1.src],
+        render: renderer.author,
       },
       {
-        key: "budget",
-        value: 3000,
-        render: renderer.budget,
+        key: "function",
+        value: ["Programmer", "Developer"],
+        render: renderer.function,
       },
       {
         key: "status",
-        value: "Canceled",
-      },
-
-      {
-        key: "completion",
-        value: 10,
-        render: renderer.completion,
+        value: "Offline",
+        render: renderer.status,
       },
       {
-        key: "option",
+        key: "employed",
+        value: "2022-11-21T10:17:44.165Z",
+        render: renderer.employed,
+      },
+      {
+        key: "action",
         value: "",
-        render: renderer.option,
+        render: renderer.action,
       },
     ],
     [
       {
-        key: "company",
-        value: ["Platform Errors", slack.src],
-        render: renderer.companyName,
+        key: "author",
+        value: ["Laurent Michael", "laurent@simple.com", author2.src],
+        render: renderer.author,
       },
       {
-        key: "budget",
-        value: 0,
-        render: renderer.budget,
+        key: "function",
+        value: ["Executive", "Project"],
+        render: renderer.function,
       },
       {
         key: "status",
-        value: "Done",
+        value: "Online",
+        render: renderer.status,
       },
       {
-        key: "completion",
-        value: 100,
-        render: renderer.completion,
+        key: "employed",
+        value: "2022-11-23T10:17:44.165Z",
+        render: renderer.employed,
       },
       {
-        key: "option",
+        key: "action",
         value: "",
-        render: renderer.option,
+        render: renderer.action,
       },
     ],
     [
       {
-        key: "company",
-        value: ["Launch our Mobile App", spotify.src],
-        render: renderer.companyName,
+        key: "author",
+        value: ["Freduardo Hill", "hill@simple.com", author3.src],
+        render: renderer.author,
       },
       {
-        key: "budget",
-        value: 32000,
-        render: renderer.budget,
+        key: "function",
+        value: ["Manager", "Organization"],
+        render: renderer.function,
       },
       {
         key: "status",
-        value: "Done",
+        value: "Online",
+        render: renderer.status,
       },
       {
-        key: "completion",
-        value: 100,
-        render: renderer.completion,
+        key: "employed",
+        value: "2022-11-24T10:17:44.165Z",
+        render: renderer.employed,
       },
       {
-        key: "option",
+        key: "action",
         value: "",
-        render: renderer.option,
+        render: renderer.action,
       },
     ],
     [
       {
-        key: "company",
-        value: ["Add the New Pricing Page", jira.src],
-        render: renderer.companyName,
+        key: "author",
+        value: ["Daniel Thomas", "daniel@simple.com", author4.src],
+        render: renderer.author,
       },
       {
-        key: "budget",
-        value: 400,
-        render: renderer.budget,
+        key: "function",
+        value: ["Programmer", "Developer"],
+        render: renderer.function,
       },
       {
         key: "status",
-        value: "Working",
+        value: "Offline",
+        render: renderer.status,
       },
       {
-        key: "completion",
-        value: 25,
-        render: renderer.completion,
+        key: "employed",
+        value: "2022-11-26T10:17:44.165Z",
+        render: renderer.employed,
       },
       {
-        key: "option",
+        key: "action",
         value: "",
-        render: renderer.option,
+        render: renderer.action,
+      },
+    ],
+    [
+      {
+        key: "author",
+        value: ["Mark Wilson", "mark@simple.com", author1.src],
+        render: renderer.author,
+      },
+      {
+        key: "function",
+        value: ["Designer", "UI/UX Design"],
+        render: renderer.function,
+      },
+      {
+        key: "status",
+        value: "Offline",
+        render: renderer.status,
+      },
+      {
+        key: "employed",
+        value: "2022-11-27T10:17:44.165Z",
+        render: renderer.employed,
+      },
+      {
+        key: "action",
+        value: "",
+        render: renderer.action,
       },
     ],
   ],
 };
 
 const Authors = () => {
-  return <Box>Authors</Box>;
+  return (
+    <Box>
+      <Table head={projectsDataTable.head} body={projectsDataTable.body} />
+    </Box>
+  );
 };
 
 export default Authors;

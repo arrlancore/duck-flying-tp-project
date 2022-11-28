@@ -21,7 +21,9 @@ type Props = {
 
 const Table = (props: Props) => {
   return (
-    <div className={`overflow-x-auto relative ${props.rootStyle}`}>
+    <div
+      className={`overflow-x-auto min-w-[320px] relative ${props.rootStyle}`}
+    >
       <table className="w-full text-sm text-left font-bold text-gray-700">
         <thead className="text-[10px] uppercase text-gray-400 uppercase dark:text-gray-400">
           <tr>
@@ -44,7 +46,7 @@ const Table = (props: Props) => {
               className="bg-white border-solid border-gray-100 border-t"
             >
               {tds.map((data, idx) => (
-                <td key={idx} className={`py-2 px-6 pl-2`}>
+                <td key={idx} className={`py-2 px-6 ${idx == 0 ? "pl-2" : ""}`}>
                   {data.render ? data.render(data.value, tds) : data.value}
                 </td>
               ))}

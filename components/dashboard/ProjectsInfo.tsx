@@ -30,7 +30,7 @@ import Text from "../Text";
 const renderer = {
   companyName: ([title, logo]: [string, string]) => {
     return (
-      <div className="flex">
+      <div className="flex min-w-[140px]">
         <Image className="mr-2" width={20} height={20} src={logo} alt={title} />{" "}
         {title}
       </div>

@@ -49,6 +49,7 @@ export default function Tables() {
               <SpaceY />
               <Authors />
               <Projects />
+              <Footer />
             </section>
           </div>
         </div>
