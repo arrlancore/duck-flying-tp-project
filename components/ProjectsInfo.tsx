@@ -285,7 +285,7 @@ const ProjectsInfo = () => {
         </div>
 
         <Table
-          rootStyle="mt-8"
+          rootStyle="mt-6"
           head={projectsDataTable.head}
           body={projectsDataTable.body}
         />
@@ -308,7 +308,7 @@ const ProjectsInfo = () => {
               >
                 <Image alt="icon" src={data.iconUrl} width="16" height="30" />
               </div>
-              <Text variant="head2">{data.title}</Text>
+              <Text variant="head1">{data.title}</Text>
               <Text className="text-bold">
                 <time>{new Date(data.date).toLocaleString()}</time>
               </Text>
