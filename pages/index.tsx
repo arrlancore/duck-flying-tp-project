@@ -36,7 +36,7 @@ export default function Home() {
               <Hero />
               <Stats />
               <ProjectsInfo />
-              <Footer></Footer>
+              <Footer />
             </section>
           </div>
         </div>
