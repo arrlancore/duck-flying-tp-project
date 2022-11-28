@@ -35,7 +35,7 @@ export default function Home() {
               <Summary />
               <Hero />
               <Stats />
-              <ProjectsInfo></ProjectsInfo>
+              <ProjectsInfo />
               <Footer></Footer>
             </section>
           </div>
