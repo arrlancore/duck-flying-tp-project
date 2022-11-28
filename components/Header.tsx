@@ -10,14 +10,14 @@ import {
 } from "../src/assets/icons";
 import Text from "./Text";
 
-const Header = () => {
+const Header = ({ title }: { title: string }) => {
   return (
     <section className="flex px-4 justify-between flex-col sm:flex-row">
       <div className="flex flex-col">
         <div className="text-xs font-normal text-gray-400">
-          Pages <span className="text-gray-700">/ Dashboard</span>
+          Pages <span className="text-gray-700">/ {title}</span>
         </div>
-        <Text variant="head1">Dashboard</Text>
+        <Text variant="head1">{title}</Text>
       </div>
       <div className="flex items-center">
         {/* search input */}
