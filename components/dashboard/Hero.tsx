@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { chakra } from "../src/assets/images";
-import Box from "./Box";
-import Text from "./Text";
+import { chakra } from "../../src/assets/images";
+import Box from "../Box";
+import Text from "../Text";
 
 const Hero = () => {
   return (

@@ -2,16 +2,18 @@ import Brand from "./Brand";
 import DocumentationCTA from "./DocumentationCTA";
 import Footer from "./Footer";
 import Header from "./Header";
-import Hero from "./Hero";
 import MainMenu from "./MainMenu";
-import ProjectsInfo from "./ProjectsInfo";
-import Stats from "./Stats";
-import Summary from "./Summary";
 import Text from "./Text";
 import Table from "./Table";
 import Progress from "./Progress";
-import Projects from "./Projects";
-import Authors from "./Authors";
+
+import Hero from "./dashboard/Hero";
+import ProjectsInfo from "./dashboard/ProjectsInfo";
+import Stats from "./dashboard/Stats";
+import Summary from "./dashboard/Summary";
+
+import Projects from "./tables/Projects";
+import Authors from "./tables/Authors";
 
 export {
   Brand,

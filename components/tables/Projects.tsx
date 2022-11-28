@@ -1,10 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import { adobeXd, atlassian, jira, slack, spotify } from "../src/assets/icons";
-import Box from "./Box";
-import OptionIcon from "./OptionIcon";
-import Progress from "./Progress";
-import Table from "./Table";
+import {
+  adobeXd,
+  atlassian,
+  jira,
+  slack,
+  spotify,
+} from "../../src/assets/icons";
+import Box from "../Box";
+import OptionIcon from "../OptionIcon";
+import Progress from "../Progress";
+import Table from "../Table";
 
 const renderer = {
   companyName: ([title, logo]: [string, string]) => {

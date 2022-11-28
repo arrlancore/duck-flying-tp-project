@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { cart, globe, textDocument, wallet } from "../src/assets/icons";
-import Box from "./Box";
+import { cart, globe, textDocument, wallet } from "../../src/assets/icons";
+import Box from "../Box";
 
 const summaries = [
   {

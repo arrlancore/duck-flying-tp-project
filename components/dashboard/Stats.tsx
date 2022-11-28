@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import Config from "../src/assets/icon/components/Config";
-import Rocket from "../src/assets/icon/components/Rocket";
-import { cart, config, rocket, wallet } from "../src/assets/icons";
-import { IconProps } from "../src/types";
-import Box from "./Box";
-import Progress from "./Progress";
+import Config from "../../src/assets/icon/components/Config";
+import Rocket from "../../src/assets/icon/components/Rocket";
+import { cart, wallet } from "../../src/assets/icons";
+import { IconProps } from "../../src/types";
+import Box from "../Box";
+import Progress from "../Progress";
 import {
   BarChart,
   Bar,
@@ -13,15 +13,11 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
-  LineChart,
-  Line,
-  Brush,
   AreaChart,
   Area,
 } from "recharts";
-import Text from "./Text";
+import Text from "../Text";
 
 const currentStats = [
   {
