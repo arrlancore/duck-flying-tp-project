@@ -1,3 +1,4 @@
+import Head from "next/head";
 import {
   Brand,
   DocumentationCTA,
@@ -13,6 +14,11 @@ import {
 export default function Home() {
   return (
     <div className="bg-primary w-full overflow-hidden min-h-screen">
+      {/* Meta */}
+      <Head>
+        <title>Dashboard</title>
+        <meta name="description" content="Purity UI" key="desc" />
+      </Head>
       <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
         <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
           {/* Sidebar */}
