@@ -10,6 +10,7 @@ import {
   Stats,
   Summary,
 } from "../components";
+import { SpaceY } from "../components/Space";
 
 const caption = {
   title: "Dashboard",
@@ -43,6 +44,7 @@ export default function Tables() {
             >
               {/* MainContent */}
               <Header title={caption.title} />
+              <SpaceY />
               <Summary />
               <Hero />
               <Stats />

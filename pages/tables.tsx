@@ -12,6 +12,7 @@ import {
   Stats,
   Summary,
 } from "../components";
+import { SpaceY } from "../components/Space";
 
 const caption = {
   title: "Tables",
@@ -45,6 +46,7 @@ export default function Tables() {
             >
               {/* MainContent */}
               <Header title={caption.title} />
+              <SpaceY />
               <Authors />
               <Projects />
             </section>

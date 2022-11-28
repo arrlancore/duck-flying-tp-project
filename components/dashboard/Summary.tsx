@@ -36,7 +36,7 @@ const summaries = [
 
 const Summary = () => {
   return (
-    <div className="pt-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4">
       {summaries.map((sum) => (
         <Box key={sum.id}>
           <div className="flex justify-between">
