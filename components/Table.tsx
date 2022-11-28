@@ -5,16 +5,18 @@ type TableHead = {
   render?: (value: string) => JSX.Element;
 };
 
+type TableBody = Array<
+  Array<{
+    key: string;
+    value: any;
+    render?: (value: any, parents: any[]) => JSX.Element;
+  }>
+>;
+
 type Props = {
   rootStyle?: string;
   head: Array<TableHead>;
-  body: Array<
-    Array<{
-      key: string;
-      value: any;
-      render?: (value: any, parents: any[]) => JSX.Element;
-    }>
-  >;
+  body: TableBody;
 };
 
 const Table = (props: Props) => {
@@ -42,7 +44,7 @@ const Table = (props: Props) => {
               className="bg-white border-solid border-gray-100 border-t"
             >
               {tds.map((data, idx) => (
-                <td key={idx} className={`py-4 px-6 pl-2`}>
+                <td key={idx} className={`py-2 px-6 pl-2`}>
                   {data.render ? data.render(data.value, tds) : data.value}
                 </td>
               ))}
