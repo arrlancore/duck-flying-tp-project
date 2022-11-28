@@ -8,7 +8,7 @@ const DocumentationCTA = () => {
   return (
     <Box
       className="hidden md:flex shadow-none bg-secondary
-     flex-col items-start relative"
+     flex-col items-start relative mt-10"
     >
       <Image
         className="absolute right-0 bottom-0
