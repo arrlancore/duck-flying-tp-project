@@ -11,13 +11,18 @@ import {
   Summary,
 } from "../components";
 
-export default function Home() {
+const caption = {
+  title: "Dashboard",
+  description: "Purity UI Dashboard",
+};
+
+export default function Tables() {
   return (
     <div className="bg-primary w-full overflow-hidden min-h-screen">
       {/* Meta */}
       <Head>
-        <title>Dashboard</title>
-        <meta name="description" content="Purity UI" key="desc" />
+        <title>{caption.title}</title>
+        <meta name="description" content={caption.description} key="desc" />
       </Head>
       <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
         <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
@@ -37,7 +42,7 @@ export default function Home() {
               className="flex flex-col w-full ml-0 md:ml-10"
             >
               {/* MainContent */}
-              <Header />
+              <Header title={caption.title} />
               <Summary />
               <Hero />
               <Stats />
