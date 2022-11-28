@@ -58,7 +58,9 @@ const renderer = {
       </span>
     </div>
   ),
-  employed: (date: string) => new Date(date).toLocaleDateString(),
+  employed: (date: string) => (
+    <span>{new Date(date).toLocaleDateString()}</span>
+  ),
   action: () => (
     <Link title="Edit" href="#" className=" text-gray-500">
       Edit
