@@ -30,6 +30,15 @@ import help from "./icon/help.svg";
 import menu from "./icon/menu.svg";
 import close from "./icon/close.svg";
 import contentOption from "./icon/content-options.svg";
+import calendar from "./icon/calendar.svg";
+import cardBackground from "./icon/card-background.svg";
+import mastercardIcon from "./icon/mastercard-icon.svg";
+import mastercardWhite from "./icon/mastercard-white.svg";
+import visaIcon from "./icon/visa-icon.svg";
+import paypal from "./icon/paypal.svg";
+import deleteIcon from "./icon/delete.svg";
+import editIcon from "./icon/edit.svg";
+import textDocumentBlack from "./icon/text-document-black.svg";
 
 export {
   adobeXd,
@@ -64,4 +73,13 @@ export {
   contentOption,
   menu,
   close,
+  calendar,
+  cardBackground,
+  mastercardIcon,
+  mastercardWhite,
+  visaIcon,
+  paypal,
+  deleteIcon,
+  editIcon,
+  textDocumentBlack,
 };
