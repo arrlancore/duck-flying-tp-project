@@ -3,9 +3,14 @@ import React from "react";
 import {
   adobeXd,
   atlassian,
+  bell,
+  cardOrange,
+  cartBlue,
   checkMark,
   contentOption,
+  css3,
   invision,
+  openBox,
   slack,
   spotify,
 } from "../src/assets/icons";
@@ -214,6 +219,45 @@ const projectsDataTable = {
   ],
 };
 
+const ordersData = [
+  {
+    id: "order-1",
+    title: "$2400, Design changes",
+    date: "2022-11-21T06:54:52.526Z",
+    iconUrl: bell.src,
+  },
+  {
+    id: "order-2",
+    title: "New order $43234",
+    date: "2022-11-22T06:54:52.526Z",
+    iconUrl: css3.src,
+  },
+  {
+    id: "order-3",
+    title: "Server Payments for April",
+    date: "2022-11-23T06:54:52.526Z",
+    iconUrl: cartBlue.src,
+  },
+  {
+    id: "order-4",
+    title: "New card added for order #3210145",
+    date: "2022-11-24T06:54:52.526Z",
+    iconUrl: cardOrange.src,
+  },
+  {
+    id: "order-5",
+    title: "Unlock packages for Development",
+    date: "2022-11-25T06:54:52.526Z",
+    iconUrl: openBox.src,
+  },
+  {
+    id: "order-6",
+    title: "New order #9851258",
+    date: "2022-11-26T06:54:52.526Z",
+    iconUrl: adobeXd.src,
+  },
+];
+
 const ProjectsInfo = () => {
   return (
     <div
@@ -246,8 +290,31 @@ const ProjectsInfo = () => {
           body={projectsDataTable.body}
         />
       </Box>
-      <Box className="flex-[2] flex justify-between w-full flex-col md:flex-row">
-        journey
+      <Box className="flex-[2] flex w-full flex-col">
+        <div className="flex flex-col">
+          <Text variant="head2">Orders Overview</Text>
+          <Text variant="caption">
+            <b className="text-green-400">+30%</b> this month
+          </Text>
+        </div>
+
+        <ol className="relative border-l-2 mt-4 border-gray-200">
+          {ordersData.map((data) => (
+            <li className="mb-4 ml-4" key={data.id}>
+              <div
+                className="absolute w-8 h-8 bg-white 
+              flex justify-center rounded-full -left-4
+              -mt-1 border border-white"
+              >
+                <Image alt="icon" src={data.iconUrl} width="16" height="30" />
+              </div>
+              <Text variant="head2">{data.title}</Text>
+              <Text className="text-bold">
+                <time>{new Date(data.date).toLocaleString()}</time>
+              </Text>
+            </li>
+          ))}
+        </ol>
       </Box>
     </div>
   );
