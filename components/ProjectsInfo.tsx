@@ -10,6 +10,7 @@ import {
   contentOption,
   css3,
   invision,
+  jira,
   openBox,
   slack,
   spotify,
@@ -147,7 +148,7 @@ const projectsDataTable = {
     [
       {
         key: "company",
-        value: ["Launch our Mobile App", slack.src],
+        value: ["Launch our Mobile App", spotify.src],
         render: renderer.companyName,
       },
       {
@@ -169,7 +170,7 @@ const projectsDataTable = {
     [
       {
         key: "company",
-        value: ["Add the New Pricing Page", spotify.src],
+        value: ["Add the New Pricing Page", jira.src],
         render: renderer.companyName,
       },
       {
