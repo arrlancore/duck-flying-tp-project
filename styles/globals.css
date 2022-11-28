@@ -41,6 +41,11 @@
   );
 }
 
+.bg-chart-visit-gradient {
+  background: linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
+  border-radius: 12px;
+}
+
 .bg-hero-gradient {
   background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
 }
