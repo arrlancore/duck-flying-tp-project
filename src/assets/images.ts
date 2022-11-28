@@ -7,6 +7,12 @@ import chakra from "./image/chakra.png";
 import documentationBackground from "./image/documentation-background.png";
 import imageBg1 from "./image/image-background-1.png";
 import lineRadarBg from "./image/line-radar-background.png";
+import author1 from "./image/author1.png";
+import author2 from "./image/author2.png";
+import author3 from "./image/author3.png";
+import author4 from "./image/author4.png";
+import author5 from "./image/author5.png";
+import author6 from "./image/author6.png";
 
 export {
   avatar1,
@@ -18,4 +24,10 @@ export {
   documentationBackground,
   imageBg1,
   lineRadarBg,
+  author1,
+  author2,
+  author3,
+  author4,
+  author5,
+  author6,
 };

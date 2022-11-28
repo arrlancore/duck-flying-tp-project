@@ -8,6 +8,10 @@ import ProjectsInfo from "./ProjectsInfo";
 import Stats from "./Stats";
 import Summary from "./Summary";
 import Text from "./Text";
+import Table from "./Table";
+import Progress from "./Progress";
+import Projects from "./Projects";
+import Authors from "./Authors";
 
 export {
   Brand,
@@ -20,4 +24,8 @@ export {
   Stats,
   Summary,
   Text,
+  Table,
+  Progress,
+  Projects,
+  Authors,
 };

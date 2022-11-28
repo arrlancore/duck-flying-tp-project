@@ -1,11 +1,13 @@
 import Head from "next/head";
 import {
+  Authors,
   Brand,
   DocumentationCTA,
   Footer,
   Header,
   Hero,
   MainMenu,
+  Projects,
   ProjectsInfo,
   Stats,
   Summary,
@@ -43,11 +45,8 @@ export default function Tables() {
             >
               {/* MainContent */}
               <Header title={caption.title} />
-              <Summary />
-              <Hero />
-              <Stats />
-              <ProjectsInfo />
-              <Footer />
+              <Authors />
+              <Projects />
             </section>
           </div>
         </div>

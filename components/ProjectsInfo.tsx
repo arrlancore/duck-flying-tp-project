@@ -23,6 +23,7 @@ import {
   avatar5,
 } from "../src/assets/images";
 import Box from "./Box";
+import OptionIcon from "./OptionIcon";
 import Progress from "./Progress";
 import Table from "./Table";
 import Text from "./Text";
@@ -277,12 +278,7 @@ const ProjectsInfo = () => {
             </div>
           </div>
 
-          <div
-            className="p-2 cursor-pointer rounded-full
-           hover:bg-gray-100 w-[37px] h-[37px]"
-          >
-            <Image {...contentOption} alt="option" />
-          </div>
+          <OptionIcon />
         </div>
 
         <Table
