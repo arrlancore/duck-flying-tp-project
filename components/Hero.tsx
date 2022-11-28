@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { chakra } from "../src/assets/images";
 import Box from "./Box";
+import Text from "./Text";
 
 const Hero = () => {
   return (
@@ -18,10 +19,10 @@ const Hero = () => {
             <div className="text-lg font-bold text-gray-700">
               Purity UI Dashboard
             </div>
-            <p className="text-sm font-normal text-gray-400">
+            <Text>
               From colors, cards, typography to complex elements, you will find
               the full documentation.
-            </p>
+            </Text>
           </div>
           <div
             className="text-[10px] font-bold
@@ -38,10 +39,10 @@ const Hero = () => {
                 <div className="text-lg font-bold text-white">
                   Work with the Rockets
                 </div>
-                <p className="text-sm font-normal text-white">
+                <Text>
                   Wealth creation is an evolutionarily recent positive-sum game.
                   It is all about who take the opportunity first.
-                </p>
+                </Text>
               </div>
               <div
                 className="text-[10px] font-bold

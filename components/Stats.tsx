@@ -21,6 +21,7 @@ import {
   AreaChart,
   Area,
 } from "recharts";
+import Text from "./Text";
 
 const currentStats = [
   {
@@ -159,13 +160,8 @@ const Stats = () => {
             </ResponsiveContainer>
           </div>
           <div className="w-full mt-2">
-            <div
-              className="font-bold text-lg 
-            text-gray-700"
-            >
-              Active Users
-            </div>
-            <div className="font-normal text-sm text-gray-400">
+            <Text variant="head2">Active Users</Text>
+            <Text variant="caption">
               <span
                 className="font-bold
                text-green-400"
@@ -173,7 +169,7 @@ const Stats = () => {
                 (+23)
               </span>{" "}
               than last week
-            </div>
+            </Text>
 
             <div className="mt-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 xl:gap-12">
               {currentStats.map((stat) => (
@@ -208,13 +204,8 @@ const Stats = () => {
         </div>
       </Box>
       <Box className="flex-[3] w-full relative overflow-hidden">
-        <div
-          className="font-bold text-lg 
-            text-gray-700"
-        >
-          Sales Overview
-        </div>
-        <div className="font-normal text-sm text-gray-400">
+        <Text variant="head2">Sales Overview</Text>
+        <Text variant="caption">
           <span
             className="font-bold
                text-green-400"
@@ -222,7 +213,7 @@ const Stats = () => {
             (+5) more
           </span>{" "}
           in 2021
-        </div>
+        </Text>
 
         <ResponsiveContainer className="pt-4" width="100%" height={300}>
           <AreaChart

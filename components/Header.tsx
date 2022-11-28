@@ -8,6 +8,7 @@ import {
   search,
   settings,
 } from "../src/assets/icons";
+import Text from "./Text";
 
 const Header = () => {
   return (
@@ -16,7 +17,7 @@ const Header = () => {
         <div className="text-xs font-normal text-gray-400">
           Pages <span className="text-gray-700">/ Dashboard</span>
         </div>
-        <div className="my-1 font-bold text-sm text-gray-700">Dashboard</div>
+        <Text variant="head1">Dashboard</Text>
       </div>
       <div className="flex items-center">
         {/* search input */}
