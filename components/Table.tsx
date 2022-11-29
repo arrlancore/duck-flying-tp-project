@@ -11,7 +11,7 @@ export type TRender<T> = {
   [k: string]: (v: ValueOf<T>, row: T) => JSX.Element;
 };
 
-type Props2<T> = {
+type Props<T> = {
   heads: THead[];
   rows: TRow<T>[];
   renderers: TRender<T>;
@@ -22,7 +22,7 @@ function getHeadKeys<T>(heads: THead[]) {
   return heads.map((head) => head.key as keyof T);
 }
 
-export function Table<T>(props: Props2<T>) {
+export function Table<T>(props: Props<T>) {
   const keys = getHeadKeys(props.heads);
 
   return (

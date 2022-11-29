@@ -9,243 +9,155 @@ import {
 } from "../../src/assets/icons";
 import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
-import Table from "../Table";
+import Table, { THead, TRender, TRow } from "../Table";
 import Image from "next/image";
 import {
   author1,
   author2,
   author3,
   author4,
+  author5,
   author6,
 } from "../../src/assets/images";
 import Text from "../Text";
 import Link from "next/link";
+import { formatDate } from "../../src/utils";
 
-const renderer = {
-  author: ([name, email, pic]: [string, string, string]) => {
+type UserAuthor = { name: string; email: string; pic: string };
+type UserFunction = { func: string; division: string };
+
+type AuthorData = {
+  author: UserAuthor;
+  function: UserFunction;
+  status: string;
+  employed: string;
+  action?: string;
+};
+
+const tableHeads: THead[] = [
+  { key: "author", title: "Author" },
+  { key: "function", title: "Function" },
+  { key: "status", title: "Status" },
+  { key: "employed", title: "Employed" },
+  { key: "action", title: "" },
+];
+
+const tableRenderers: TRender<AuthorData> = {
+  author: (value) => {
+    const author = value as UserAuthor;
     return (
       <div className="flex items-center">
         <Image
-          className="rounded-2xl object-contain"
+          className="rounded-[10px] min-w-[40px] h-[40px] object-cover"
           width="40"
           height="40"
-          src={pic}
-          alt={name}
+          src={author.pic}
+          alt={author.name}
         />{" "}
         <div className="flex flex-col pl-3">
-          <div>{name}</div>
-          <Text variant="caption">{email}</Text>
+          <div>{author.name}</div>
+          <Text variant="caption">{author.email}</Text>
         </div>
       </div>
     );
   },
-  function: ([func, division]: [string, string]) => {
+  function: (value) => {
+    const role = value as UserFunction;
     return (
       <div className="flex flex-col">
-        <div>{func}</div>
-        <Text variant="caption">{division}</Text>
+        <div>{role.func}</div>
+        <Text variant="caption">{role.division}</Text>
       </div>
     );
   },
-  status: (statuses: string) => (
+  status: (value) => (
     <div>
       <span
         className={`py-2 px-4 text-white rounded-lg ${
-          statuses.toLowerCase() == "online" ? "bg-[#48BB78]" : "bg-gray-300"
+          (value as string).toLowerCase() == "online"
+            ? "bg-[#48BB78]"
+            : "bg-gray-300"
         }`}
       >
-        {statuses}
+        {value as string}
       </span>
     </div>
   ),
-  employed: (date: string) => (
-    <span>{new Date(date).toLocaleDateString()}</span>
-  ),
-  action: () => (
+  employed: (value) => <span>{formatDate(value as string, "dd/MM/yy")}</span>,
+  action: (_, obj) => (
     <Link title="Edit" href="#" className=" text-gray-500">
       Edit
     </Link>
   ),
 };
 
-const projectsDataTable = {
-  head: [
-    { value: "Author" },
-    { value: "Function" },
-    { value: "Status" },
-    { value: "Employed" },
-    { value: "" },
-  ],
-  body: [
-    [
-      {
-        key: "author",
-        value: ["Esthera Jackson", "esthera@simple.com", author6.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Manager", "Organization"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Online",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-28T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-    [
-      {
-        key: "author",
-        value: ["Alexa Liras", "alexa@simple.com", author1.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Programmer", "Developer"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Offline",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-21T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-    [
-      {
-        key: "author",
-        value: ["Laurent Michael", "laurent@simple.com", author2.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Executive", "Project"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Online",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-23T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-    [
-      {
-        key: "author",
-        value: ["Freduardo Hill", "hill@simple.com", author3.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Manager", "Organization"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Online",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-24T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-    [
-      {
-        key: "author",
-        value: ["Daniel Thomas", "daniel@simple.com", author4.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Programmer", "Developer"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Offline",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-26T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-    [
-      {
-        key: "author",
-        value: ["Mark Wilson", "mark@simple.com", author1.src],
-        render: renderer.author,
-      },
-      {
-        key: "function",
-        value: ["Designer", "UI/UX Design"],
-        render: renderer.function,
-      },
-      {
-        key: "status",
-        value: "Offline",
-        render: renderer.status,
-      },
-      {
-        key: "employed",
-        value: "2022-11-27T10:17:44.165Z",
-        render: renderer.employed,
-      },
-      {
-        key: "action",
-        value: "",
-        render: renderer.action,
-      },
-    ],
-  ],
-};
+const tableRows: TRow<AuthorData>[] = [
+  {
+    author: {
+      name: "Estera Jackson",
+      email: "esthera@simple.com",
+      pic: author6.src,
+    },
+    function: { func: "Manager", division: "Organization" },
+    status: "Online",
+    employed: "2022-02-03T10:17:44.165Z",
+  },
+  {
+    author: {
+      name: "Alexa Liras",
+      email: "alexa@simple.com",
+      pic: author1.src,
+    },
+    function: { func: "Programmer", division: "Developer" },
+    status: "Offline",
+    employed: "2022-11-21T10:17:44.165Z",
+  },
+  {
+    author: {
+      name: "Laurent Michael",
+      email: "laurent@simple.com",
+      pic: author2.src,
+    },
+    function: { func: "Executive", division: "Project" },
+    status: "Online",
+    employed: "2022-01-05T10:17:44.165Z",
+  },
+  {
+    author: {
+      name: "Freduardo Hill",
+      email: "fred@simple.com",
+      pic: author3.src,
+    },
+    function: { func: "Programmer", division: "Developer" },
+    status: "Online",
+    employed: "2022-06-21T10:17:44.165Z",
+  },
+  {
+    author: {
+      name: "Daniel Thomas",
+      email: "daniel@simple.com",
+      pic: author4.src,
+    },
+    function: { func: "Programmer", division: "Developer" },
+    status: "Offline",
+    employed: "2022-04-04T10:17:44.165Z",
+  },
+  {
+    author: {
+      name: "Mark Wilson",
+      email: "mark@simple.com",
+      pic: author5.src,
+    },
+    function: { func: "Designer", division: "UI/UX Design" },
+    status: "Offline",
+    employed: "2022-11-03T10:17:44.165Z",
+  },
+];
 
 const Authors = () => {
   return (
     <Box>
-      <Table head={projectsDataTable.head} body={projectsDataTable.body} />
+      <Table heads={tableHeads} rows={tableRows} renderers={tableRenderers} />
     </Box>
   );
 };
