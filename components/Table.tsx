@@ -30,7 +30,7 @@ export function Table<T>(props: Props<T>) {
       className={`overflow-x-auto min-w-[320px] relative ${props.rootStyle}`}
     >
       <table className="w-full text-sm text-left font-bold text-gray-700">
-        <thead className="text-[10px] uppercase text-gray-400 uppercase dark:text-gray-400">
+        <thead className="text-[10px] uppercase text-gray-400 dark:text-gray-400">
           <tr>
             {props.heads?.map((h, idx) => (
               <th
