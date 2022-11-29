@@ -7,6 +7,7 @@ import {
   MainMenu,
   ProfileHeader,
   ProfileInfo,
+  UserProjects,
 } from "../../components";
 import { SpaceY } from "../../components/Space";
 
@@ -52,6 +53,8 @@ export default function Profile() {
               <ProfileHeader />
               <SpaceY />
               <ProfileInfo />
+              <SpaceY />
+              <UserProjects />
               <Footer />
             </section>
           </div>
