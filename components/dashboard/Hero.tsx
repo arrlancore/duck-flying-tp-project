@@ -34,7 +34,7 @@ const Hero = () => {
           </div>
           <div
             className="text-[10px] font-bold
-             text-gray-700 cursor-pointer"
+             text-gray-700 cursor-pointer mt-2"
           >
             {caption.readMore}
           </div>
@@ -53,7 +53,7 @@ const Hero = () => {
               </div>
               <div
                 className="text-[10px] font-bold
-             text-white cursor-pointer"
+             text-white cursor-pointer mt-2"
               >
                 {caption.readMore}
               </div>

@@ -4,12 +4,13 @@ type TextVariant = "head1" | "head2" | "caption";
 
 type Props = HTMLAttributes<HTMLElement> & { variant?: TextVariant };
 
-const Text = ({ variant, ...rest }: Props) => {
+const Text = ({ variant, className, ...rest }: Props) => {
   if (variant == "head1") {
     return (
       <div
         className={`my-1 font-bold text-sm
-       text-gray-700 ${rest.className ?? ""}`}
+       text-gray-700 ${className ?? ""}`}
+        {...rest}
       >
         {rest.children}
       </div>
@@ -19,7 +20,8 @@ const Text = ({ variant, ...rest }: Props) => {
     return (
       <div
         className={`font-bold text-lg text-gray-700
-         ${rest.className ?? ""}`}
+         ${className ?? ""}`}
+        {...rest}
       >
         {rest.children}
       </div>
@@ -28,8 +30,9 @@ const Text = ({ variant, ...rest }: Props) => {
   if (variant == "caption") {
     return (
       <span
-        className={`text-sm text-gray-400
-         ${rest.className ?? ""}`}
+        className={`text-sm font-base-400 text-gray-400
+         ${className ?? ""}`}
+        {...rest}
       >
         {rest.children}
       </span>
@@ -37,8 +40,9 @@ const Text = ({ variant, ...rest }: Props) => {
   }
   return (
     <p
-      className={`text-sm text-gray-400
-  ${rest.className ?? ""}`}
+      className={`text-sm font-base-400 text-gray-400
+  ${className ?? ""}`}
+      {...rest}
     >
       {rest.children}
     </p>

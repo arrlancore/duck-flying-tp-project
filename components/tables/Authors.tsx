@@ -156,7 +156,7 @@ const tableRows: TRow<AuthorData>[] = [
 
 const Authors = () => {
   return (
-    <Box>
+    <Box className="font-normal">
       <Table heads={tableHeads} rows={tableRows} renderers={tableRenderers} />
     </Box>
   );

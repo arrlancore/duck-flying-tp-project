@@ -141,7 +141,11 @@ const BillingPayment = () => {
                   <Text variant="head1">
                     {formatDate(data.date, `MMMM, dd, yyyy`)}
                   </Text>
-                  <Text variant="caption" className="font-bold">
+                  <Text
+                    style={{ fontSize: 12 }}
+                    variant="caption"
+                    className="font-bold"
+                  >
                     #{data.id}
                   </Text>
                 </div>

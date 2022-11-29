@@ -31,8 +31,8 @@ const Toggle = ({
               dark:border-gray-600 peer-checked:bg-secondary"
         ></div>
         <span
-          className="ml-3 text-sm font-medium text-gray-900
-         dark:text-gray-400"
+          className="ml-3 text-sm font-medium
+         text-gray-400"
         >
           {label}
         </span>

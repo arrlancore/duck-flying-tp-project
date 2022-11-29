@@ -6,13 +6,6 @@ import Box from "../Box";
 import { SpaceY } from "../Space";
 import Text from "../Text";
 
-// Oliver Liam
-// deleteDELETE
-// editEDIT
-// Company Name: Viking Burrito
-// Email Address: oliver@burrito.com
-// VAT Number: FRB123456
-
 const billingInfoData = [
   {
     id: "bill-info-1",
@@ -202,7 +195,7 @@ const BillingInformation = () => {
                 />
                 <div className="flex flex-col">
                   <Text variant="head1">{purpose}</Text>
-                  <Text variant="caption" className="font-bold">
+                  <Text variant="caption" className="font-bold text-xs">
                     {formatDate(date, `dd MMMM yyyy,`) +
                       " at " +
                       formatDate(date, `hh:mm aa`)}
@@ -238,7 +231,7 @@ const BillingInformation = () => {
                 />
                 <div className="flex flex-col">
                   <Text variant="head1">{purpose}</Text>
-                  <Text variant="caption" className="font-bold">
+                  <Text variant="caption" className="font-bold text-xs">
                     {formatDate(date, `dd MMMM yyyy,`) +
                       " at " +
                       formatDate(date, `hh:mm aa`)}

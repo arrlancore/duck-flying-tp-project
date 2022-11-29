@@ -13,7 +13,7 @@ module.exports = {
         green400: "#48BB78",
       },
       fontFamily: {
-        helvetica: ["Helvetica", "sans-serif"],
+        helvetica: ["Helvetica", "Inter", "Arial", "serif"],
       },
     },
     screens: {

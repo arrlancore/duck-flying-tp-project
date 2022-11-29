@@ -8,7 +8,7 @@ const BillingPaymentInfo = () => {
   return (
     <div className="flex flex-col sm:flex-row">
       <div className="flex-[2]">
-        <div className="w-full min-auto bg-chart-visit-gradient">
+        <div className="w-full max-w-[400px] min-auto bg-chart-visit-gradient">
           <div
             className="flex w-full min-h-[200px] p-4 bg-radar-2
             bg-no-repeat bg-cover"
