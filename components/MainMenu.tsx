@@ -3,6 +3,10 @@ import { useRouter } from "next/router";
 import React from "react";
 import { additionalMenus, mainMenus, TMenuItem } from "./menus";
 
+const captions = {
+  accountPages: "ACCOUNT PAGES",
+};
+
 const MenuItem = ({
   isActive,
   Icon,
@@ -47,7 +51,9 @@ const MainMenu = () => {
         ))}
       </ul>
 
-      <h3 className="px-4 py-2 text-[12px] font-bold">ACCOUNT PAGES</h3>
+      <h3 className="px-4 py-2 text-[12px] font-bold">
+        {captions.accountPages}
+      </h3>
       <ul className="flex-1">
         {additionalMenus.map((props) => (
           <li className="list-none" key={props.id}>
