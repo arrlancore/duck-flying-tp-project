@@ -40,6 +40,17 @@ import deleteIcon from "./icon/delete.svg";
 import editIcon from "./icon/edit.svg";
 import textDocumentBlack from "./icon/text-document-black.svg";
 import defaultGradientLine from "./icon/default-gradient-line.svg";
+import add from "./icon/add.svg";
+import facebook from "./icon/facebook.svg";
+import instagram from "./icon/instagram.svg";
+import notificationsWhite from "./icon/notifications-white.svg";
+import overview from "./icon/overview.svg";
+import personWhite from "./icon/person-white.svg";
+import projectsConfig from "./icon/projects-config.svg";
+import settingsWhite from "./icon/settings-white.svg";
+import teams from "./icon/teams.svg";
+import twitter from "./icon/twitter.svg";
+import editGreen from "./icon/edit-green.svg";
 
 export {
   adobeXd,
@@ -84,4 +95,15 @@ export {
   editIcon,
   textDocumentBlack,
   defaultGradientLine,
+  add,
+  facebook,
+  instagram,
+  notificationsWhite,
+  overview,
+  personWhite,
+  projectsConfig,
+  settingsWhite,
+  teams,
+  twitter,
+  editGreen,
 };

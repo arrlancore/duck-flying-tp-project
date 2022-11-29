@@ -13,6 +13,10 @@ import author3 from "./image/author3.png";
 import author4 from "./image/author4.png";
 import author5 from "./image/author5.png";
 import author6 from "./image/author6.png";
+import project1 from "./image/project1.png";
+import project2 from "./image/project2.png";
+import project3 from "./image/project3.png";
+import profilePict from "./image/profile-pict.jpg";
 
 export {
   avatar1,
@@ -30,4 +34,8 @@ export {
   author4,
   author5,
   author6,
+  project1,
+  project2,
+  project3,
+  profilePict,
 };

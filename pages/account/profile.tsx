@@ -11,6 +11,7 @@ import {
   Summary,
 } from "../../components";
 import Box from "../../components/Box";
+import ProfileHeader from "../../components/profile/ProfileHeader";
 import { SpaceY } from "../../components/Space";
 
 const caption = {
@@ -42,11 +43,17 @@ export default function Profile() {
 
             <section
               id="main-content"
-              className="flex flex-col w-full ml-0 md:ml-10"
+              className="flex flex-col w-full ml-0 md:ml-10 relative"
             >
-              <Header title={caption.title} />
+              <div
+                className="flex absolute left-0 top-0 z-0 
+              bg-green-pattern bg-secondary bg-no-repeat bg-cover
+               rounded-[15px] w-full min-h-[280px]"
+              />
+              <SpaceY className="h-5" />
+              <Header variant="secondary" title={caption.title} />
               <SpaceY />
-              <Box>Content</Box>
+              <ProfileHeader />
               <Footer />
             </section>
           </div>

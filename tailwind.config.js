@@ -27,7 +27,8 @@ module.exports = {
     backgroundImage: {
       "hero-1": "url('/image-background-1.png')",
       "card-purity": "url('/card-background.svg')",
-      radar2: "url('/radar-background-2.svg')",
+      "radar-2": "url('/radar-background-2.svg')",
+      "green-pattern": "url('/green-pattern-background.svg')",
     },
   },
   plugins: [],
