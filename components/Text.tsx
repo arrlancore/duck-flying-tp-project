@@ -28,7 +28,7 @@ const Text = ({ variant, ...rest }: Props) => {
   if (variant == "caption") {
     return (
       <span
-        className={`font-normal text-sm text-gray-400
+        className={`text-sm text-gray-400
          ${rest.className ?? ""}`}
       >
         {rest.children}
@@ -37,7 +37,7 @@ const Text = ({ variant, ...rest }: Props) => {
   }
   return (
     <p
-      className={`text-sm font-normal text-gray-400
+      className={`text-sm text-gray-400
   ${rest.className ?? ""}`}
     >
       {rest.children}

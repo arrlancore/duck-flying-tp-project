@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import { logo, menu, close } from "../src/assets/icons";
 import { brandName } from "../src/constants";
+import GradientLine from "./GradientLine";
 import MobileMenu from "./MobileMenu";
 
 const Brand = () => {
@@ -36,8 +37,7 @@ const Brand = () => {
 
         <MobileMenu open={openMobileMenu} />
       </div>
-      {/* gradient line */}
-      <hr className="w-full hidden md:block outline-none border-[0px] my-2 rounded-sm h-[1px] bg-gradient-to-r from-transparent via-gray-200 to-transparent" />
+      <GradientLine className="hidden md:block" />
     </div>
   );
 };

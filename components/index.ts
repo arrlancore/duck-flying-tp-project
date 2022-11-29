@@ -6,6 +6,7 @@ import MainMenu from "./MainMenu";
 import Text from "./Text";
 import Table from "./Table";
 import Progress from "./Progress";
+import GradientLine from "./GradientLine";
 
 import Hero from "./dashboard/Hero";
 import ProjectsInfo from "./dashboard/ProjectsInfo";
@@ -14,6 +15,9 @@ import Summary from "./dashboard/Summary";
 
 import Projects from "./tables/Projects";
 import Authors from "./tables/Authors";
+
+import BillingInformation from "./billing/BillingInformation";
+import BillingPayment from "./billing/BillingPayment";
 
 export {
   Brand,
@@ -30,4 +34,7 @@ export {
   Progress,
   Projects,
   Authors,
+  BillingInformation,
+  BillingPayment,
+  GradientLine,
 };

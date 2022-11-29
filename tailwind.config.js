@@ -26,6 +26,8 @@ module.exports = {
     },
     backgroundImage: {
       "hero-1": "url('/image-background-1.png')",
+      "card-purity": "url('/card-background.svg')",
+      radar2: "url('/radar-background-2.svg')",
     },
   },
   plugins: [],

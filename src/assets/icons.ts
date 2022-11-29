@@ -39,6 +39,7 @@ import paypal from "./icon/paypal.svg";
 import deleteIcon from "./icon/delete.svg";
 import editIcon from "./icon/edit.svg";
 import textDocumentBlack from "./icon/text-document-black.svg";
+import defaultGradientLine from "./icon/default-gradient-line.svg";
 
 export {
   adobeXd,
@@ -82,4 +83,5 @@ export {
   deleteIcon,
   editIcon,
   textDocumentBlack,
+  defaultGradientLine,
 };

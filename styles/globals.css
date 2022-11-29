@@ -5,47 +5,49 @@
 @tailwind components;
 @tailwind utilities;
 
-.mobileMenu {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+@layer components { 
+  .mobileMenu {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
   }
-}
-
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
+  
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(100px);
+      transform: translateY(100px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
   }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+  
+  .bg-black-gradient {
+    background: linear-gradient(
+      144.39deg,
+      #ffffff -278.56%,
+      #6d6d6d -78.47%,
+      #11101d 91.61%
+    );
   }
-}
-
-.bg-black-gradient {
-  background: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-}
-
-.bg-chart-visit-gradient {
-  background: linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
-  border-radius: 12px;
-}
-
-.bg-hero-gradient {
-  background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+  
+  .bg-chart-visit-gradient {
+    background: linear-gradient(81.62deg, #313860 2.25%, #151928 79.87%);
+    border-radius: 12px;
+  }
+  
+  .bg-hero-gradient {
+    background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+  }
 }
