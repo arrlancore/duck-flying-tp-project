@@ -2,14 +2,24 @@ import Link from "next/link";
 import React from "react";
 import Text from "./Text";
 
+const caption = {
+  copyrightPref: `@ ${new Date().getFullYear()}, Made with ❤️ by`,
+  copyrightPost: "for a better web",
+  team1: "Creative Tim",
+  team2: "Simmmple",
+  blog: "Blog",
+  license: "License",
+};
+
 const Footer = () => {
   return (
     <div className="flex justify-between mt-auto pt-6 py-4 flex-col md:flex-row">
       <div className="w-full flex-1">
         <Text variant="caption" className="text-xs">
-          @ {new Date().getFullYear()}, Made with ❤️ by{" "}
-          <span className="text-secondary">Creative Tim</span> &{" "}
-          <span className="text-secondary">Simmmple</span> for a better web
+          {caption.copyrightPref}{" "}
+          <span className="text-secondary">{caption.team1}</span> &{" "}
+          <span className="text-secondary">{caption.team2}</span>{" "}
+          {caption.copyrightPost}
         </Text>
       </div>
       <div
@@ -17,16 +27,16 @@ const Footer = () => {
         md:gap-8 pt-8 md:pt-0 text-left md:text-right items-center"
       >
         <Text variant="caption" className="text-xs">
-          <Link href="#">Creative Tim</Link>
+          <Link href="#">{caption.team1}</Link>
         </Text>
         <Text variant="caption" className="text-xs">
-          <Link href="#">Simmmple</Link>
+          <Link href="#">{caption.team2}</Link>
         </Text>
         <Text variant="caption" className="text-xs">
-          <Link href="#">Blog</Link>
+          <Link href="#">{caption.blog}</Link>
         </Text>
         <Text variant="caption" className="text-xs">
-          <Link href="#">License</Link>
+          <Link href="#">{caption.license}</Link>
         </Text>
       </div>
     </div>
