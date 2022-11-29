@@ -9,15 +9,16 @@ import {
   ProjectsInfo,
   Stats,
   Summary,
-} from "../components";
-import { SpaceY } from "../components/Space";
+} from "../../components";
+import Box from "../../components/Box";
+import { SpaceY } from "../../components/Space";
 
 const caption = {
-  title: "Profile",
+  title: "Sign In",
   description: "Purity UI Dashboard",
 };
 
-export default function Profile() {
+export default function SignIn() {
   return (
     <div className="bg-primary w-full overflow-hidden min-h-screen">
       {/* Meta */}
@@ -45,10 +46,7 @@ export default function Profile() {
             >
               <Header title={caption.title} />
               <SpaceY />
-              <Summary />
-              <Hero />
-              <Stats />
-              <ProjectsInfo />
+              <Box>Sign In Content</Box>
               <Footer />
             </section>
           </div>
