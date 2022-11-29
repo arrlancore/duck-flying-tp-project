@@ -4,7 +4,7 @@ import Text from "./Text";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between mt-2 py-4 flex-col md:flex-row">
+    <div className="flex justify-between mt-auto pt-2 py-4 flex-col md:flex-row">
       <div className="w-full flex-1">
         <Text variant="caption" className="text-xs">
           @ {new Date().getFullYear()}, Made with ❤️ by{" "}

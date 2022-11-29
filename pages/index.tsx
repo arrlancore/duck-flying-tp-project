@@ -27,7 +27,6 @@ export default function Tables() {
       </Head>
       <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
         <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
-          {/* Sidebar */}
           <div className="flex flex-col md:flex-row">
             <section
               id="sidebar"
@@ -42,7 +41,6 @@ export default function Tables() {
               id="main-content"
               className="flex flex-col w-full ml-0 md:ml-10"
             >
-              {/* MainContent */}
               <Header title={caption.title} />
               <SpaceY />
               <Summary />

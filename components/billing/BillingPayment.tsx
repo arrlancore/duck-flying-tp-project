@@ -138,8 +138,8 @@ const BillingPayment = () => {
                 className="flex justify-between items-center mt-4"
               >
                 <div className="flex flex-col">
-                  <Text variant="head2">
-                    {formatDate(data.date, `MMM, dd, yyyy`)}
+                  <Text variant="head1">
+                    {formatDate(data.date, `MMMM, dd, yyyy`)}
                   </Text>
                   <Text variant="caption">#{data.id}</Text>
                 </div>
