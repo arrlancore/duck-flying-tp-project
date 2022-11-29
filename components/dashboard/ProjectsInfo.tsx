@@ -179,6 +179,16 @@ const ordersData = [
   },
 ];
 
+const caption = {
+  projects: "Projects",
+  projectsDescPref: "30 done",
+  projectsDescPost: "this month",
+
+  orders: "Orders Overview",
+  ordersDescPref: "+30%",
+  ordersDescPost: "this month",
+};
+
 const ProjectsInfo = () => {
   return (
     <div
@@ -188,11 +198,11 @@ const ProjectsInfo = () => {
       <Box className="flex-[5] flex justify-between w-full flex-col">
         <div className="flex w-full justify-between">
           <div className="flex flex-col">
-            <Text variant="head2">Projects</Text>
+            <Text variant="head2">{caption.projects}</Text>
             <div className="flex">
               <Image className="mr-1" alt="check-mark" {...checkMark} />
               <Text variant="caption">
-                <b>30 done</b> this month
+                <b>{caption.projectsDescPref}</b> {caption.projectsDescPost}
               </Text>
             </div>
           </div>
@@ -209,9 +219,10 @@ const ProjectsInfo = () => {
       </Box>
       <Box className="flex-[2] flex w-full flex-col">
         <div className="flex flex-col">
-          <Text variant="head2">Orders Overview</Text>
+          <Text variant="head2">{caption.orders}</Text>
           <Text variant="caption">
-            <b className="text-green-400">+30%</b> this month
+            <b className="text-green-400">{caption.ordersDescPref}</b>{" "}
+            {caption.ordersDescPost}
           </Text>
         </div>
 

@@ -123,6 +123,15 @@ const dataSales = [
   },
 ];
 
+const caption = {
+  activeUser: "Active Users",
+  salesOverview: "Sales Overview",
+  activeUserDescPref: "(+23)",
+  activeUserDescPost: " than last week",
+  salesOverviewDescPref: "(+5) more",
+  salesOverviewDescPost: " in 2021",
+};
+
 const Stats = () => {
   return (
     <div
@@ -156,15 +165,15 @@ const Stats = () => {
             </ResponsiveContainer>
           </div>
           <div className="w-full mt-2">
-            <Text variant="head2">Active Users</Text>
+            <Text variant="head2">{caption.activeUser}</Text>
             <Text variant="caption">
               <span
                 className="font-bold
                text-green-400"
               >
-                (+23)
-              </span>{" "}
-              than last week
+                {caption.activeUserDescPref}
+              </span>
+              {caption.activeUserDescPost}
             </Text>
 
             <div className="mt-4 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-6 xl:gap-12">
@@ -200,15 +209,15 @@ const Stats = () => {
         </div>
       </Box>
       <Box className="flex-[3] w-full relative overflow-hidden">
-        <Text variant="head2">Sales Overview</Text>
+        <Text variant="head2">{caption.salesOverview}</Text>
         <Text variant="caption">
           <span
             className="font-bold
                text-green-400"
           >
-            (+5) more
-          </span>{" "}
-          in 2021
+            {caption.salesOverviewDescPref}
+          </span>
+          {caption.salesOverviewDescPost}
         </Text>
 
         <ResponsiveContainer className="pt-4" width="100%" height={300}>
