@@ -15,7 +15,7 @@ const caption = {
   description: "Purity UI Dashboard",
 };
 
-export default function Tables() {
+export default function Billing() {
   return (
     <div className="bg-primary w-full overflow-hidden min-h-screen">
       {/* Meta */}

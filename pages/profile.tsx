@@ -13,11 +13,11 @@ import {
 import { SpaceY } from "../components/Space";
 
 const caption = {
-  title: "Dashboard",
+  title: "Profile",
   description: "Purity UI Dashboard",
 };
 
-export default function Dashboard() {
+export default function Profile() {
   return (
     <div className="bg-primary w-full overflow-hidden min-h-screen">
       {/* Meta */}
