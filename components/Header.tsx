@@ -56,7 +56,7 @@ const Header = ({
           {title}
         </Text>
       </div>
-      <div className="flex items-center">
+      <div className="flex items-center justify-between sm:justify-start">
         {/* search input */}
         <div className="flex relative">
           <input

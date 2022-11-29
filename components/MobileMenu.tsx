@@ -50,7 +50,7 @@ const MobileMenu = ({ open }: { open: boolean }) => {
       className={`${
         open ? `flex` : "hidden"
       } p-6 absolute top-10 bg-black-gradient right-0 
-      mx-4 my-2 min-w-[140px] rounded-xl mobileMenu z-[1]`}
+      mx-4 my-2 min-w-[140px] rounded-xl mobileMenu z-20`}
     >
       <ul className="list-none flex justify-end items-center flex-col flex-1">
         {menus.map((nav, index) => (

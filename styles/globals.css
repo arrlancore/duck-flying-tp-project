@@ -48,4 +48,9 @@
   .bg-hero-gradient {
     background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
   }
+
+  .bg-projects-overlay {
+    background: linear-gradient(360deg, rgba(49, 56, 96, 0.16) 0%, rgba(21, 25, 40, 0.88) 100%);
+    border-radius: 12px;
+  }
 }
