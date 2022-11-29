@@ -4,6 +4,12 @@ import { help } from "../src/assets/icons";
 import { lineRadarBg } from "../src/assets/images";
 import Box from "./Box";
 
+const caption = {
+  needHelp: "Need Help?",
+  pleaseCheck: "Please check our docs",
+  documentation: "DOCUMENTATION",
+};
+
 const DocumentationCTA = () => {
   return (
     <Box
@@ -24,9 +30,9 @@ const DocumentationCTA = () => {
         className="text-white mt-6
       font-bold text-[14px]"
       >
-        Need Help?
+        {caption.needHelp}
       </h4>
-      <p className="text-white text-[14px]">Please check our docs</p>
+      <p className="text-white text-[14px]">{caption.pleaseCheck}</p>
       <Box
         className="flex items-center
         justify-center mt-2 cursor-pointer z-10"
@@ -35,7 +41,7 @@ const DocumentationCTA = () => {
           className="text-4 text-[10px]
         leading-[15px] font-bold text-gray-700"
         >
-          DOCUMENTATION
+          {caption.documentation}
         </span>
       </Box>
     </Box>

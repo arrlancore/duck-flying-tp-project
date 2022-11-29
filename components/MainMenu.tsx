@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { additionalMenus, mainMenus, TMenuItem } from "./menus";
 
-const captions = {
+const caption = {
   accountPages: "ACCOUNT PAGES",
 };
 
@@ -52,7 +52,7 @@ const MainMenu = () => {
       </ul>
 
       <h3 className="px-4 py-2 text-[12px] font-bold">
-        {captions.accountPages}
+        {caption.accountPages}
       </h3>
       <ul className="flex-1">
         {additionalMenus.map((props) => (
