@@ -1,4 +1,4 @@
-import avatar1 from "./image/Avatar1.png";
+import avatar from "./image/Avatar1.png";
 import avatar2 from "./image/Avatar2.png";
 import avatar3 from "./image/Avatar3.png";
 import avatar4 from "./image/Avatar4.png";
@@ -22,7 +22,7 @@ import profilePict3 from "./image/profile-3.jpg";
 import profilePict4 from "./image/profile-4.jpg";
 
 export {
-  avatar1,
+  avatar,
   avatar2,
   avatar3,
   avatar4,

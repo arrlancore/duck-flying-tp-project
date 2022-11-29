@@ -2,10 +2,10 @@ import Image from "next/image";
 import React from "react";
 import { add } from "../../src/assets/icons";
 import {
-  avatar1,
   avatar2,
   avatar3,
   avatar4,
+  avatar5,
   project1,
   project2,
   project3,
@@ -21,7 +21,7 @@ const projectsData = [
     description:
       "As Uber works through a huge amount of internal management turmoil.",
     img: project1.src,
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
+    members: [avatar5.src, avatar2.src, avatar3.src, avatar4.src],
   },
   {
     id: "Project #2",
@@ -29,7 +29,7 @@ const projectsData = [
     description:
       "Music is something that every person has his or her own specific opinion about.",
     img: project2.src,
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
+    members: [avatar5.src, avatar2.src, avatar3.src, avatar4.src],
   },
   {
     id: "Project #3",
@@ -37,7 +37,7 @@ const projectsData = [
     description:
       "Different people have different taste, and various types of music.",
     img: project3.src,
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
+    members: [avatar5.src, avatar2.src, avatar3.src, avatar4.src],
   },
 ];
 

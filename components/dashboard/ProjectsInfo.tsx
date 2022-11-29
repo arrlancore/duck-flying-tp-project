@@ -14,17 +14,11 @@ import {
   slack,
   spotify,
 } from "../../src/assets/icons";
-import {
-  avatar1,
-  avatar2,
-  avatar3,
-  avatar4,
-  avatar5,
-} from "../../src/assets/images";
+import { avatar2, avatar3, avatar4, avatar5 } from "../../src/assets/images";
 import Box from "../Box";
 import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
-import Table, { Table2, THead, TRender, TRow } from "../Table";
+import Table, { THead, TRender, TRow } from "../Table";
 import Text from "../Text";
 
 type Company = {
@@ -95,7 +89,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Chakra Soft UI",
       logo: adobeXd.src,
     },
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
     budget: 14000,
     completion: 60,
   },
@@ -104,7 +98,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Add Progress Track",
       logo: atlassian.src,
     },
-    members: [avatar1.src, avatar2.src],
+    members: [avatar4.src, avatar2.src],
     budget: 3000,
     completion: 10,
   },
@@ -113,7 +107,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Platform Errors",
       logo: slack.src,
     },
-    members: [avatar1.src, avatar2.src],
+    members: [avatar4.src, avatar2.src],
     budget: 0,
     completion: 100,
   },
@@ -122,7 +116,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Launch our Mobile App",
       logo: spotify.src,
     },
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
+    members: [avatar5.src, avatar2.src, avatar3.src, avatar4.src],
     budget: 3200,
     completion: 100,
   },
@@ -131,7 +125,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Add the New Pricing Page",
       logo: jira.src,
     },
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
     budget: 400,
     completion: 25,
   },
@@ -140,7 +134,7 @@ const tableRows: TRow<ProjectData>[] = [
       title: "Redesign New Online Shop",
       logo: invision.src,
     },
-    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
     budget: 7600,
     completion: 40,
   },
@@ -206,7 +200,7 @@ const ProjectsInfo = () => {
           <OptionIcon />
         </div>
 
-        <Table2
+        <Table
           rootStyle="mt-6"
           heads={tableHeads}
           rows={tableRows}
