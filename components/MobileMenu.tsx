@@ -14,7 +14,8 @@ const MobileMenu = ({ open }: { open: boolean }) => {
         {mobileMenus.map((nav, index) => (
           <Link key={nav.id} href={nav.to}>
             <li
-              className={`font-normal cursor-pointer text-white text-[12px] ${
+              className={`font-normal cursor-pointer text-white 
+              text-[12px] px-4 py-2 active:opacity-80 ${
                 index == mobileMenus.length - 1 ? "mb-0" : "mb-4"
               }`}
             >
