@@ -39,7 +39,7 @@ export const menus: Array<TMenuItem> = [
   {
     id: "main-menu-4",
     title: "RTL",
-    to: "/rtl",
+    to: "#rtl",
     Icon: (props: IconProps) => <ConfigIcon {...props} />,
   },
 ];

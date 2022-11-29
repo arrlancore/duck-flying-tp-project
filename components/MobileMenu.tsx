@@ -20,7 +20,7 @@ export const menus = [
   {
     id: "main-menu-4",
     title: "RTL",
-    to: "/rtl",
+    to: "#rtl",
   },
   {
     id: "additional-menu-1",
