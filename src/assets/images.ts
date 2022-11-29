@@ -17,6 +17,9 @@ import project1 from "./image/project1.png";
 import project2 from "./image/project2.png";
 import project3 from "./image/project3.png";
 import profilePict from "./image/profile-pict.jpg";
+import profilePict2 from "./image/profile-2.jpg";
+import profilePict3 from "./image/profile-3.jpg";
+import profilePict4 from "./image/profile-4.jpg";
 
 export {
   avatar1,
@@ -38,4 +41,7 @@ export {
   project2,
   project3,
   profilePict,
+  profilePict2,
+  profilePict3,
+  profilePict4,
 };

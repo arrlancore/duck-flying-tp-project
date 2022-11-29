@@ -7,6 +7,7 @@ import Text from "./Text";
 import Table from "./Table";
 import Progress from "./Progress";
 import GradientLine from "./GradientLine";
+import Toggle from "./Toggle";
 
 import Hero from "./dashboard/Hero";
 import ProjectsInfo from "./dashboard/ProjectsInfo";
@@ -18,6 +19,10 @@ import Authors from "./tables/Authors";
 
 import BillingInformation from "./billing/BillingInformation";
 import BillingPayment from "./billing/BillingPayment";
+
+import ProfileHeader from "./profile/ProfileHeader";
+import ProfileInfo from "./profile/ProfileInfo";
+import UserProjects from "./profile/UserProjects";
 
 export {
   Brand,
@@ -37,4 +42,8 @@ export {
   BillingInformation,
   BillingPayment,
   GradientLine,
+  Toggle,
+  ProfileHeader,
+  ProfileInfo,
+  UserProjects,
 };

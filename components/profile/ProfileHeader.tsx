@@ -43,21 +43,29 @@ const ProfileHeader = () => {
               className="flex items-center px-8 py-3 uppercase text-xs
              font-bold text-gray-700 bg-white shadow-md rounded-xl"
             >
-              <Image alt="overview" className="mr-1" {...overview} />
+              <Image
+                alt="overview"
+                className="mr-1 min-w-[12px]"
+                {...overview}
+              />
               overview
             </button>
             <button
               className="flex items-center px-4 py-2 uppercase text-xs
              font-bold text-gray-700 ml-4"
             >
-              <Image alt="overview" className="mr-1" {...teams} />
+              <Image alt="overview" className="mr-1 min-w-[12px]" {...teams} />
               teams
             </button>
             <button
               className="flex items-center px-4 py-2 uppercase text-xs
              font-bold text-gray-700 ml-4"
             >
-              <Image alt="overview" className="mr-1" {...projectsConfig} />
+              <Image
+                alt="overview"
+                className="mr-1 min-w-[12px]"
+                {...projectsConfig}
+              />
               project
             </button>
           </div>

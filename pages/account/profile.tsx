@@ -4,14 +4,10 @@ import {
   DocumentationCTA,
   Footer,
   Header,
-  Hero,
   MainMenu,
-  ProjectsInfo,
-  Stats,
-  Summary,
+  ProfileHeader,
+  ProfileInfo,
 } from "../../components";
-import Box from "../../components/Box";
-import ProfileHeader from "../../components/profile/ProfileHeader";
 import { SpaceY } from "../../components/Space";
 
 const caption = {
@@ -54,6 +50,8 @@ export default function Profile() {
               <Header variant="secondary" title={caption.title} />
               <SpaceY />
               <ProfileHeader />
+              <SpaceY />
+              <ProfileInfo />
               <Footer />
             </section>
           </div>
