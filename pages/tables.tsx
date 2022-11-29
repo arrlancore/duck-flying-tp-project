@@ -27,7 +27,9 @@ export default function Tables() {
         <title>{caption.title}</title>
         <meta name="description" content={caption.description} key="desc" />
       </Head>
-      <div className={`py-6 px-6 sm:px-16 flex justify-center items-center`}>
+      <div
+        className={`py-6 px-2 sm:px-16 xl:px-24 flex justify-center items-center`}
+      >
         <div className={`xl:max-w-[1920px] w-full font-helvetica`}>
           <div className="flex flex-col md:flex-row">
             <section
