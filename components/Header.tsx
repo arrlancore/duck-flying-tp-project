@@ -19,6 +19,10 @@ const adjustColorByVariant = (isSecondary: boolean, defaultColor: string) => {
   return isSecondary ? "[#fff]" : defaultColor;
 };
 
+const caption = {
+  pages: "Pages",
+};
+
 const Header = ({
   title,
   variant,
@@ -42,7 +46,7 @@ const Header = ({
             "gray-400"
           )}`}
         >
-          Pages{" "}
+          {caption.pages}{" "}
           <span
             className={`text-${adjustColorByVariant(isSecondary, "gray-700")}`}
           >

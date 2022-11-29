@@ -4,6 +4,17 @@ import { chakra } from "../../src/assets/images";
 import Box from "../Box";
 import Text from "../Text";
 
+const caption = {
+  buildBy: "Built by developers",
+  hero1title: "Purity UI Dashboard",
+  hero1desc:
+    "From colors, cards, typography to complex elements, you will find the full documentation.",
+  readMore: "Read More  →",
+  hero2title: "Work with the Rockets",
+  hero2desc:
+    "Wealth creation is an evolutionarily recent positive-sum game. It is all about who take the opportunity first.",
+};
+
 const Hero = () => {
   return (
     <div
@@ -14,20 +25,19 @@ const Hero = () => {
         <div className="flex flex-col justify-between">
           <div className="pr-2">
             <div className="text-xs font-bold text-gray-400">
-              Built by developers
+              {caption.buildBy}
             </div>
             <div className="text-lg font-bold text-gray-700">
-              Purity UI Dashboard
+              {caption.hero1title}
             </div>
-            <Text>
-              From colors, cards, typography to complex elements, you will find
-              the full documentation.
-            </Text>
+            <Text>{caption.hero1desc}</Text>
           </div>
           <div
             className="text-[10px] font-bold
              text-gray-700 cursor-pointer"
-          >{`Read More  →`}</div>
+          >
+            {caption.readMore}
+          </div>
         </div>
         <Image className="mt-4 md:mt-0" alt="hero-img" {...chakra} />
       </Box>
@@ -37,17 +47,16 @@ const Hero = () => {
             <div className="flex flex-col justify-between h-full">
               <div className="pr-2">
                 <div className="text-lg font-bold text-white">
-                  Work with the Rockets
+                  {caption.hero2title}
                 </div>
-                <Text>
-                  Wealth creation is an evolutionarily recent positive-sum game.
-                  It is all about who take the opportunity first.
-                </Text>
+                <Text>{caption.hero2desc}</Text>
               </div>
               <div
                 className="text-[10px] font-bold
              text-white cursor-pointer"
-              >{`Read More  →`}</div>
+              >
+                {caption.readMore}
+              </div>
             </div>
           </div>
         </div>
