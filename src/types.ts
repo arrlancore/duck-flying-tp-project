@@ -3,3 +3,5 @@ export type IconProps = {
   width?: string;
   height?: string;
 };
+
+export type ValueOf<T> = T[keyof T];

@@ -24,22 +24,39 @@ import {
 import Box from "../Box";
 import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
-import Table from "../Table";
+import Table, { Table2, THead, TRender, TRow } from "../Table";
 import Text from "../Text";
 
-const renderer = {
-  companyName: ([title, logo]: [string, string]) => {
+type Company = {
+  title: string;
+  logo: string;
+};
+type ProjectData = {
+  company: Company;
+  members: string[];
+  budget: number;
+  completion: number;
+};
+
+const tableRenderers: TRender<ProjectData> = {
+  company: (company) => {
     return (
       <div className="flex min-w-[140px]">
-        <Image className="mr-2" width={20} height={20} src={logo} alt={title} />{" "}
-        {title}
+        <Image
+          className="mr-2"
+          width={20}
+          height={20}
+          src={(company as Company).logo}
+          alt={(company as Company).title}
+        />{" "}
+        {(company as Company).title}
       </div>
     );
   },
-  members: (value: string[]) => {
+  members: (value) => {
     return (
       <div className="flex relative">
-        {value.map((src, idx) => (
+        {(value as string[]).map((src, idx) => (
           <Image
             key={idx}
             src={src}
@@ -53,172 +70,81 @@ const renderer = {
       </div>
     );
   },
-  budget: (value: number) => {
+  budget: (value) => {
     const formatter = (n: number) => new Intl.NumberFormat().format(n);
-    return <div>{value ? `$${formatter(value)}` : "Not Set"}</div>;
+    return <div>{value ? `$${formatter(value as number)}` : "Not Set"}</div>;
   },
-  completion: (value: number) => (
+  completion: (value) => (
     <div className="flex flex-col">
-      <div>{value}</div>
-      <Progress pct={value} />
+      <div>{value as number}</div>
+      <Progress pct={value as number} />
     </div>
   ),
 };
 
-const projectsDataTable = {
-  head: [
-    { value: "Companies" },
-    { value: "Members" },
-    { value: "Budget" },
-    { value: "Completion" },
-  ],
-  body: [
-    [
-      {
-        key: "company",
-        value: ["Chakra Soft UI", adobeXd.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [
-          avatar1.src,
-          avatar2.src,
-          avatar3.src,
-          avatar4.src,
-          avatar5.src,
-        ],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 14000,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 60,
-        render: renderer.completion,
-      },
-    ],
-    [
-      {
-        key: "company",
-        value: ["Add Progress Track", atlassian.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [avatar1.src, avatar2.src],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 3000,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 10,
-        render: renderer.completion,
-      },
-    ],
-    [
-      {
-        key: "company",
-        value: ["Platform Errors", slack.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [avatar1.src, avatar2.src],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 0,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 100,
-        render: renderer.completion,
-      },
-    ],
-    [
-      {
-        key: "company",
-        value: ["Launch our Mobile App", spotify.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 32000,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 100,
-        render: renderer.completion,
-      },
-    ],
-    [
-      {
-        key: "company",
-        value: ["Add the New Pricing Page", jira.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [
-          avatar1.src,
-          avatar2.src,
-          avatar3.src,
-          avatar4.src,
-          avatar5.src,
-        ],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 400,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 25,
-        render: renderer.completion,
-      },
-    ],
-    [
-      {
-        key: "company",
-        value: ["Redesign New Online Shop", invision.src],
-        render: renderer.companyName,
-      },
-      {
-        key: "members",
-        value: [avatar1.src, avatar2.src, avatar3.src],
-        render: renderer.members,
-      },
-      {
-        key: "budget",
-        value: 7600,
-        render: renderer.budget,
-      },
-      {
-        key: "completion",
-        value: 40,
-        render: renderer.completion,
-      },
-    ],
-  ],
-};
+const tableHeads: THead[] = [
+  { key: "company", title: "Companies" },
+  { key: "members", title: "Members" },
+  { key: "budget", title: "Budget" },
+  { key: "completion", title: "Completion" },
+];
+
+const tableRows: TRow<ProjectData>[] = [
+  {
+    company: {
+      title: "Chakra Soft UI",
+      logo: adobeXd.src,
+    },
+    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    budget: 14000,
+    completion: 60,
+  },
+  {
+    company: {
+      title: "Add Progress Track",
+      logo: atlassian.src,
+    },
+    members: [avatar1.src, avatar2.src],
+    budget: 3000,
+    completion: 10,
+  },
+  {
+    company: {
+      title: "Platform Errors",
+      logo: slack.src,
+    },
+    members: [avatar1.src, avatar2.src],
+    budget: 0,
+    completion: 100,
+  },
+  {
+    company: {
+      title: "Launch our Mobile App",
+      logo: spotify.src,
+    },
+    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src],
+    budget: 3200,
+    completion: 100,
+  },
+  {
+    company: {
+      title: "Add the New Pricing Page",
+      logo: jira.src,
+    },
+    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    budget: 400,
+    completion: 25,
+  },
+  {
+    company: {
+      title: "Redesign New Online Shop",
+      logo: invision.src,
+    },
+    members: [avatar1.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
+    budget: 7600,
+    completion: 40,
+  },
+];
 
 const ordersData = [
   {
@@ -280,10 +206,11 @@ const ProjectsInfo = () => {
           <OptionIcon />
         </div>
 
-        <Table
+        <Table2
           rootStyle="mt-6"
-          head={projectsDataTable.head}
-          body={projectsDataTable.body}
+          heads={tableHeads}
+          rows={tableRows}
+          renderers={tableRenderers}
         />
       </Box>
       <Box className="flex-[2] flex w-full flex-col">
