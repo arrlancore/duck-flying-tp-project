@@ -141,10 +141,14 @@ const BillingPayment = () => {
                   <Text variant="head1">
                     {formatDate(data.date, `MMMM, dd, yyyy`)}
                   </Text>
-                  <Text variant="caption">#{data.id}</Text>
+                  <Text variant="caption" className="font-bold">
+                    #{data.id}
+                  </Text>
                 </div>
                 <div className="flex">
-                  <Text variant="caption">${data.amount}</Text>
+                  <Text variant="caption" className="font-bold">
+                    ${data.amount}
+                  </Text>
                   <Link
                     target="_blank"
                     href={data.fileUrl}

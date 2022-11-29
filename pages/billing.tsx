@@ -43,8 +43,6 @@ export default function Tables() {
               <SpaceY />
               <BillingPayment />
               <BillingInformation />
-              {"Billing Information"}
-              {"Your Transactions"}
               <Footer />
             </section>
           </div>
