@@ -29,7 +29,7 @@ const DocumentationCTA = () => {
       <p className="text-white text-[14px]">Please check our docs</p>
       <Box
         className="flex items-center
-        justify-center mt-2 cursor-pointer"
+        justify-center mt-2 cursor-pointer z-10"
       >
         <span
           className="text-4 text-[10px]
