@@ -2,44 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { facebook, instagram, twitter } from "../../src/assets/icons";
-import {
-  profilePict,
-  profilePict2,
-  profilePict3,
-  profilePict4,
-} from "../../src/assets/images";
+import { conversationsDataProfile } from "../../src/mocks";
 import Box from "../Box";
 import GradientLine from "../GradientLine";
 import { SpaceY } from "../Space";
 import Text from "../Text";
 import Toggle from "../Toggle";
-
-const conversationsData = [
-  {
-    id: "conversation-1",
-    name: "Esthera Jackson",
-    message: "Hi! I need more informations...",
-    profilePictureUrl: profilePict.src,
-  },
-  {
-    id: "conversation-2",
-    name: "Esthera Jackson 2",
-    message: "Awesome work, can you change...",
-    profilePictureUrl: profilePict2.src,
-  },
-  {
-    id: "conversation-3",
-    name: "Esthera Jackson 3",
-    message: "Have a great afternoon...",
-    profilePictureUrl: profilePict3.src,
-  },
-  {
-    id: "conversation-4",
-    name: "Esthera Jackson 4",
-    message: "About files I can...",
-    profilePictureUrl: profilePict4.src,
-  },
-];
 
 const caption = {
   platformSettings: "Platform Settings",
@@ -153,31 +121,33 @@ const ProfileInfo = () => {
       <Box className="flex-[1] ml-0 md:ml-4 mt-4 md:mt-0">
         <Text variant="head2">{caption.conversation}</Text>
         <SpaceY />
-        {conversationsData.map(({ id, name, message, profilePictureUrl }) => (
-          <div key={id} className="flex justify-between items-center">
-            <div className="flex flex-[1] items-center mb-4">
-              <Image
-                className="rounded-xl w-[50px] h-[50px] object-contain"
-                width={50}
-                height={50}
-                src={profilePictureUrl}
-                alt={"chat"}
-              />{" "}
-              <div className="flex flex-col pl-3">
-                <Text variant="head1" className="m-[0]">
-                  {name}
-                </Text>
-                <Text variant="caption">{message}</Text>
+        {conversationsDataProfile.map(
+          ({ id, name, message, profilePictureUrl }) => (
+            <div key={id} className="flex justify-between items-center">
+              <div className="flex flex-[1] items-center mb-4">
+                <Image
+                  className="rounded-xl w-[50px] h-[50px] object-contain"
+                  width={50}
+                  height={50}
+                  src={profilePictureUrl}
+                  alt={"chat"}
+                />{" "}
+                <div className="flex flex-col pl-3">
+                  <Text variant="head1" className="m-[0]">
+                    {name}
+                  </Text>
+                  <Text variant="caption">{message}</Text>
+                </div>
               </div>
+              <Link
+                href="#"
+                className="text-secondary uppercase text-[10px] font-bold"
+              >
+                {caption.reply}
+              </Link>
             </div>
-            <Link
-              href="#"
-              className="text-secondary uppercase text-[10px] font-bold"
-            >
-              {caption.reply}
-            </Link>
-          </div>
-        ))}
+          )
+        )}
       </Box>
     </div>
   );

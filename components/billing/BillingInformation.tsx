@@ -1,34 +1,15 @@
 import Image from "next/image";
 import React from "react";
 import { calendar, deleteIcon, editIcon } from "../../src/assets/icons";
+import {
+  infoDataBilling,
+  transactionNewDataBilling,
+  transactionYesterdayDataBilling,
+} from "../../src/mocks";
 import { formatDate } from "../../src/utils";
 import Box from "../Box";
 import { SpaceY } from "../Space";
 import Text from "../Text";
-
-const billingInfoData = [
-  {
-    id: "bill-info-1",
-    name: "Oliver Liam",
-    companyName: "Viking Burrito",
-    emailAddress: "oliver@burrito.com",
-    vatNumber: "FRB123456",
-  },
-  {
-    id: "bill-info-2",
-    name: "Alexa Liam",
-    companyName: "Viking Burrito",
-    emailAddress: "alexa@burrito.com",
-    vatNumber: "FRB123457",
-  },
-  {
-    id: "bill-info-3",
-    name: "Juan Liam",
-    companyName: "Viking Burrito",
-    emailAddress: "juan@burrito.com",
-    vatNumber: "FRB123458",
-  },
-];
 
 type TransactionBadgeStatus = "in" | "out" | "pending";
 
@@ -80,54 +61,6 @@ const TransactionAmount = (props: {
   return <span className="text-green-400">+${props.amount}</span>;
 };
 
-const transactionNewData = [
-  {
-    id: "transaction-1",
-    purpose: "Netflix",
-    date: "2022-11-29T02:43:14.577Z",
-    amount: 1000,
-    statuses: "in",
-  },
-  {
-    id: "transaction-2",
-    purpose: "Apple",
-    date: "2022-11-28T02:43:14.577Z",
-    amount: 1000,
-    statuses: "out",
-  },
-];
-
-const transactionYesterdayData = [
-  {
-    id: "transaction-3",
-    purpose: "Stripe",
-    date: "2022-11-29T02:43:14.577Z",
-    amount: 540,
-    statuses: "in",
-  },
-  {
-    id: "transaction-4",
-    purpose: "HubSpot",
-    date: "2022-11-28T02:43:14.577Z",
-    amount: 200,
-    statuses: "out",
-  },
-  {
-    id: "transaction-5",
-    purpose: "WebFlow",
-    date: "2022-11-26T02:43:14.577Z",
-    amount: 1000,
-    statuses: "pending",
-  },
-  {
-    id: "transaction-6",
-    purpose: "Microsoft",
-    date: "2022-11-25T02:43:14.577Z",
-    amount: 190,
-    statuses: "out",
-  },
-];
-
 const caption = {
   billInfo: "Billing Information",
   yourTransactions: "Your Transactions",
@@ -147,7 +80,7 @@ const BillingInformation = () => {
     <div className="flex mt-4 flex-col md:flex-row">
       <Box className="flex-[4]">
         <Text variant="head2">{caption.billInfo}</Text>
-        {billingInfoData.map((data) => (
+        {infoDataBilling.map((data) => (
           <Box key={data.id} className="bg-gray-100 shrink-0 rounded-lg mt-4">
             <div className="flex justify-between items-center">
               <Text variant="head1" className="text-gray-500">
@@ -198,7 +131,7 @@ const BillingInformation = () => {
           {caption.newest}
         </Text>
         <SpaceY />
-        {transactionNewData.map(
+        {transactionNewDataBilling.map(
           ({ amount, purpose, date, id, statuses }, idx) => (
             <div
               key={id}
@@ -234,7 +167,7 @@ const BillingInformation = () => {
           {caption.yesterday}
         </Text>
         <SpaceY />
-        {transactionYesterdayData.map(
+        {transactionYesterdayDataBilling.map(
           ({ amount, purpose, date, id, statuses }, idx) => (
             <div
               key={id}

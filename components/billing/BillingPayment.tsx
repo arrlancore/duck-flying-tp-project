@@ -7,50 +7,13 @@ import {
   textDocumentBlack,
   visaIcon,
 } from "../../src/assets/icons";
+import { invoicesDataPayment } from "../../src/mocks";
 import { formatDate } from "../../src/utils";
 import Box from "../Box";
 import Input from "../Input";
 import { SpaceX } from "../Space";
 import Text from "../Text";
 import BillingPaymentInfo from "./BillingPaymentInfo";
-
-const invoicesData = [
-  {
-    id: "MS-415641",
-    date: "2022-11-29T02:43:14.577Z",
-    amount: 240,
-    fileUrl:
-      "https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf",
-  },
-  {
-    id: "MS-415642",
-    date: "2022-04-01T02:43:14.577Z",
-    amount: 180,
-    fileUrl:
-      "https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf",
-  },
-  {
-    id: "MS-415643",
-    date: "2022-05-06T02:43:14.577Z",
-    amount: 120,
-    fileUrl:
-      "https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf",
-  },
-  {
-    id: "MS-415644",
-    date: "2021-02-02T02:43:14.577Z",
-    amount: 300,
-    fileUrl:
-      "https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf",
-  },
-  {
-    id: "MS-415645",
-    date: "2022-01-01T02:43:14.577Z",
-    amount: 560,
-    fileUrl:
-      "https://slicedinvoices.com/pdf/wordpress-pdf-invoice-plugin-sample.pdf",
-  },
-];
 
 const caption = {
   paymentMethod: "Payment Method",
@@ -139,7 +102,7 @@ const BillingPayment = () => {
             </button>
           </div>
           <div className="flex flex-col">
-            {invoicesData.map((data) => (
+            {invoicesDataPayment.map((data) => (
               <div
                 key={data.id}
                 className="flex justify-between items-center mt-4"

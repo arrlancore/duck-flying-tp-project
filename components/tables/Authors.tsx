@@ -1,38 +1,16 @@
 import React from "react";
 import Box from "../Box";
-import {
-  adobeXd,
-  atlassian,
-  jira,
-  slack,
-  spotify,
-} from "../../src/assets/icons";
-import OptionIcon from "../OptionIcon";
-import Progress from "../Progress";
 import Table, { THead, TRender, TRow } from "../Table";
 import Image from "next/image";
-import {
-  author1,
-  author2,
-  author3,
-  author4,
-  author5,
-  author6,
-} from "../../src/assets/images";
 import Text from "../Text";
 import Link from "next/link";
 import { formatDate } from "../../src/utils";
-
-type UserAuthor = { name: string; email: string; pic: string };
-type UserFunction = { func: string; division: string };
-
-type AuthorData = {
-  author: UserAuthor;
-  function: UserFunction;
-  status: string;
-  employed: string;
-  action?: string;
-};
+import {
+  AuthorData,
+  tableRowsAuthorTable,
+  UserAuthor,
+  UserFunction,
+} from "../../src/mocks";
 
 const tableHeads: THead[] = [
   { key: "author", title: "Author" },
@@ -84,80 +62,21 @@ const tableRenderers: TRender<AuthorData> = {
     </div>
   ),
   employed: (value) => <span>{formatDate(value as string, "dd/MM/yy")}</span>,
-  action: (_, obj) => (
+  action: () => (
     <Link title="Edit" href="#" className=" text-gray-500">
       Edit
     </Link>
   ),
 };
 
-const tableRows: TRow<AuthorData>[] = [
-  {
-    author: {
-      name: "Estera Jackson",
-      email: "esthera@simple.com",
-      pic: author6.src,
-    },
-    function: { func: "Manager", division: "Organization" },
-    status: "Online",
-    employed: "2022-02-03T10:17:44.165Z",
-  },
-  {
-    author: {
-      name: "Alexa Liras",
-      email: "alexa@simple.com",
-      pic: author1.src,
-    },
-    function: { func: "Programmer", division: "Developer" },
-    status: "Offline",
-    employed: "2022-11-21T10:17:44.165Z",
-  },
-  {
-    author: {
-      name: "Laurent Michael",
-      email: "laurent@simple.com",
-      pic: author2.src,
-    },
-    function: { func: "Executive", division: "Project" },
-    status: "Online",
-    employed: "2022-01-05T10:17:44.165Z",
-  },
-  {
-    author: {
-      name: "Freduardo Hill",
-      email: "fred@simple.com",
-      pic: author3.src,
-    },
-    function: { func: "Programmer", division: "Developer" },
-    status: "Online",
-    employed: "2022-06-21T10:17:44.165Z",
-  },
-  {
-    author: {
-      name: "Daniel Thomas",
-      email: "daniel@simple.com",
-      pic: author4.src,
-    },
-    function: { func: "Programmer", division: "Developer" },
-    status: "Offline",
-    employed: "2022-04-04T10:17:44.165Z",
-  },
-  {
-    author: {
-      name: "Mark Wilson",
-      email: "mark@simple.com",
-      pic: author5.src,
-    },
-    function: { func: "Designer", division: "UI/UX Design" },
-    status: "Offline",
-    employed: "2022-11-03T10:17:44.165Z",
-  },
-];
-
 const Authors = () => {
   return (
     <Box className="font-normal">
-      <Table heads={tableHeads} rows={tableRows} renderers={tableRenderers} />
+      <Table
+        heads={tableHeads}
+        rows={tableRowsAuthorTable}
+        renderers={tableRenderers}
+      />
     </Box>
   );
 };
