@@ -1,12 +1,16 @@
 import Image from "next/image";
 import React from "react";
-import { Company, ProjectData, tableRowsProjectTable } from "../../src/mocks";
+import {
+  Company,
+  ProjectDataTable,
+  tableRowsProjectTable,
+} from "../../src/mocks";
 import Box from "../Box";
 import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
 import Table, { THead, TRender } from "../Table";
 
-const tableRenderers: TRender<ProjectData> = {
+const tableRenderers: TRender<ProjectDataTable> = {
   company: (value) => {
     const company = value as Company;
     return (
