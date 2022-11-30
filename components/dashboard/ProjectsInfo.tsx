@@ -1,38 +1,19 @@
 import Image from "next/image";
 import React from "react";
+import { checkMark } from "../../src/assets/icons";
 import {
-  adobeXd,
-  atlassian,
-  bell,
-  cardOrange,
-  cartBlue,
-  checkMark,
-  css3,
-  invision,
-  jira,
-  openBox,
-  slack,
-  spotify,
-} from "../../src/assets/icons";
-import { avatar2, avatar3, avatar4, avatar5 } from "../../src/assets/images";
+  Company,
+  ordersDataDashboard,
+  ProjectDataDashboard,
+  tableRowsProjectDashboard,
+} from "../../src/mocks";
 import Box from "../Box";
 import OptionIcon from "../OptionIcon";
 import Progress from "../Progress";
-import Table, { THead, TRender, TRow } from "../Table";
+import Table, { THead, TRender } from "../Table";
 import Text from "../Text";
 
-type Company = {
-  title: string;
-  logo: string;
-};
-type ProjectData = {
-  company: Company;
-  members: string[];
-  budget: number;
-  completion: number;
-};
-
-const tableRenderers: TRender<ProjectData> = {
+const tableRenderers: TRender<ProjectDataDashboard> = {
   company: (company) => {
     return (
       <div className="flex min-w-[140px]">
@@ -83,102 +64,6 @@ const tableHeads: THead[] = [
   { key: "completion", title: "Completion" },
 ];
 
-const tableRows: TRow<ProjectData>[] = [
-  {
-    company: {
-      title: "Chakra Soft UI",
-      logo: adobeXd.src,
-    },
-    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
-    budget: 14000,
-    completion: 60,
-  },
-  {
-    company: {
-      title: "Add Progress Track",
-      logo: atlassian.src,
-    },
-    members: [avatar4.src, avatar2.src],
-    budget: 3000,
-    completion: 10,
-  },
-  {
-    company: {
-      title: "Platform Errors",
-      logo: slack.src,
-    },
-    members: [avatar4.src, avatar2.src],
-    budget: 0,
-    completion: 100,
-  },
-  {
-    company: {
-      title: "Launch our Mobile App",
-      logo: spotify.src,
-    },
-    members: [avatar5.src, avatar2.src, avatar3.src, avatar4.src],
-    budget: 3200,
-    completion: 100,
-  },
-  {
-    company: {
-      title: "Add the New Pricing Page",
-      logo: jira.src,
-    },
-    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
-    budget: 400,
-    completion: 25,
-  },
-  {
-    company: {
-      title: "Redesign New Online Shop",
-      logo: invision.src,
-    },
-    members: [avatar4.src, avatar2.src, avatar3.src, avatar4.src, avatar5.src],
-    budget: 7600,
-    completion: 40,
-  },
-];
-
-const ordersData = [
-  {
-    id: "order-1",
-    title: "$2400, Design changes",
-    date: "2022-11-21T06:54:52.526Z",
-    iconUrl: bell.src,
-  },
-  {
-    id: "order-2",
-    title: "New order $43234",
-    date: "2022-11-22T06:54:52.526Z",
-    iconUrl: css3.src,
-  },
-  {
-    id: "order-3",
-    title: "Server Payments for April",
-    date: "2022-11-23T06:54:52.526Z",
-    iconUrl: cartBlue.src,
-  },
-  {
-    id: "order-4",
-    title: "New card added for order #3210145",
-    date: "2022-11-24T06:54:52.526Z",
-    iconUrl: cardOrange.src,
-  },
-  {
-    id: "order-5",
-    title: "Unlock packages for Development",
-    date: "2022-11-25T06:54:52.526Z",
-    iconUrl: openBox.src,
-  },
-  {
-    id: "order-6",
-    title: "New order #9851258",
-    date: "2022-11-26T06:54:52.526Z",
-    iconUrl: adobeXd.src,
-  },
-];
-
 const caption = {
   projects: "Projects",
   projectsDescPref: "30 done",
@@ -193,7 +78,7 @@ const ProjectsInfo = () => {
   return (
     <div
       className="flex space-y-4 md:space-y-0 space-x-0 
-  md:space-x-4 pt-4 flex-col md:flex-row"
+      md:space-x-4 pt-4 flex-col md:flex-row"
     >
       <Box className="flex-[5] flex justify-between w-full flex-col">
         <div className="flex w-full justify-between">
@@ -213,7 +98,7 @@ const ProjectsInfo = () => {
         <Table
           rootStyle="mt-6"
           heads={tableHeads}
-          rows={tableRows}
+          rows={tableRowsProjectDashboard}
           renderers={tableRenderers}
         />
       </Box>
@@ -227,7 +112,7 @@ const ProjectsInfo = () => {
         </div>
 
         <ol className="relative border-l-2 mt-4 ml-2 border-gray-200">
-          {ordersData.map((data) => (
+          {ordersDataDashboard.map((data) => (
             <li className="mb-4 ml-4" key={data.id}>
               <div
                 className="absolute w-8 h-8 bg-white 
