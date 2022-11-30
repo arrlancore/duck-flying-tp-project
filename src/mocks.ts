@@ -20,6 +20,28 @@ import {
 } from "./assets/images";
 import { adobeXd, atlassian, jira, slack, spotify } from "./assets/icons";
 
+export type UserAuthor = { name: string; email: string; pic: string };
+export type UserFunction = { func: string; division: string };
+export type AuthorData = {
+  author: UserAuthor;
+  function: UserFunction;
+  status: string;
+  employed: string;
+  action?: string;
+};
+
+export type Company = {
+  title: string;
+  logo: string;
+};
+export type ProjectData = {
+  company: Company;
+  budget: number;
+  status: string;
+  completion: number;
+  option?: string;
+};
+
 // billing screen
 export const invoicesDataPayment = [
   {
@@ -188,16 +210,6 @@ export const projectsDataProfile = [
 ];
 
 // table screen
-export type UserAuthor = { name: string; email: string; pic: string };
-export type UserFunction = { func: string; division: string };
-
-export type AuthorData = {
-  author: UserAuthor;
-  function: UserFunction;
-  status: string;
-  employed: string;
-  action?: string;
-};
 
 export const tableRowsAuthorTable: TRow<AuthorData>[] = [
   {
@@ -262,17 +274,6 @@ export const tableRowsAuthorTable: TRow<AuthorData>[] = [
   },
 ];
 
-export type Company = {
-  title: string;
-  logo: string;
-};
-export type ProjectData = {
-  company: Company;
-  budget: number;
-  status: string;
-  completion: number;
-  option?: string;
-};
 export const tableRowsProjectTable: ProjectData[] = [
   {
     company: { title: "Chakra Soft UI", logo: adobeXd.src },
