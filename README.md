@@ -1,36 +1,67 @@
-# duck-flying-tp-project
+# Nextjs Tailwind Dashboard Project
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+A [Next.js](https://nextjs.org/) project with [Tailwind](https://tailwindcss.com/) for styling it
 
-## Getting Started
 
-First, run the development server:
+### Prerequisites
+- <a href="https://yarnpkg.com/en/">Yarn</a>, follow the installation <a href="https://yarnpkg.com/en/docs/install">guide</a>
+- <a href="https://nodejs.org/en/">Node.js</a>
 
+## 🚀 Get Started
+
+- Simply clone the repository using git command.
+
+```bash
+git clone git@github.com:arrlancore/duck-flying-tp-project.git
+```
+
+- Go to the project directory with command `cd duck-flying-tp-project`
+- Run `yarn` command for installation
+- Run Development Server:
 ```bash
 npm run dev
 # or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 Workspace
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Generally you will work on the `pages/`, `components/` & `src/`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- You can start editing the page by modifying `pages/[pageName].tsx`. The page auto-updates as you edit the file.
+- When you need to separate the component of the page, you need to place it under `components/`
+- And when you need to store some assets, types, utils, or some configuration you can place it under `src/`
 
-## Learn More
+## 🚀 Ready for Production?
+- You can test the production build from local with commands:
+```bash
+yarn build
+# then
+yarn start
+```
+- Open [http://localhost:3000](http://localhost:3000) to see the results
 
-To learn more about Next.js, take a look at the following resources:
+## 🚀 Using Docker?
+1. You have installed Docker on your machine.
+1. Build your container with command: `docker build -t webapp-docker:v1 .`
+1. Run your container with command: `docker run -p 3000:3000 webapp-docker:v1`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Open [http://localhost:3000](http://localhost:3000) to see the results
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+You can view images that you created with command `docker images`.
 
-## Deploy on Vercel
+## 🚀 Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 🚀 Learn More
+
+Please take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) & [Learn Next.js](https://nextjs.org/learn)
+- [Tailwind Documentation](https://tailwindcss.com/docs/installation)
+
