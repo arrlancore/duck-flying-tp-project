@@ -128,11 +128,25 @@ const transactionYesterdayData = [
   },
 ];
 
+const caption = {
+  billInfo: "Billing Information",
+  yourTransactions: "Your Transactions",
+  newest: "NEWEST",
+  yesterday: "YESTERDAY",
+  edit: "EDIT",
+  delete: "DELETE",
+  companyName: "Company Name",
+  email: "Email Address",
+  vat: "VAT Number",
+  periodTransaction: "20 - 30 March 2022",
+  at: " at ",
+};
+
 const BillingInformation = () => {
   return (
     <div className="flex mt-4 flex-col md:flex-row">
       <Box className="flex-[4]">
-        <Text variant="head2">Billing Information</Text>
+        <Text variant="head2">{caption.billInfo}</Text>
         {billingInfoData.map((data) => (
           <Box key={data.id} className="bg-gray-100 shrink-0 rounded-lg mt-4">
             <div className="flex justify-between items-center">
@@ -145,40 +159,43 @@ const BillingInformation = () => {
                   className="flex items-center font-bold hover:opacity-80
                text-[10px] text-red-500"
                 >
-                  <Image alt="delete" className="mr-1" {...deleteIcon} /> DELETE
+                  <Image alt="delete" className="mr-1" {...deleteIcon} />{" "}
+                  {caption.delete}
                 </button>
                 <button
                   className="flex items-center font-bold hover:opacity-80
                text-[10px] ml-3"
                 >
-                  <Image alt="edit" className="mr-1" {...editIcon} /> EDIT
+                  <Image alt="edit" className="mr-1" {...editIcon} />{" "}
+                  {caption.edit}
                 </button>
               </div>
             </div>
             <Text variant="caption" className="block text-xs">
-              Company Name: <b className="text-gray-500">{data.companyName}</b>
+              {caption.companyName}:{" "}
+              <b className="text-gray-500">{data.companyName}</b>
             </Text>
             <Text variant="caption" className="block text-xs">
-              Email Address:{" "}
+              {caption.email}:{" "}
               <b className="text-gray-500">{data.emailAddress}</b>
             </Text>
             <Text variant="caption" className="block text-xs">
-              VAT Number: <b className="text-gray-500">{data.vatNumber}</b>
+              {caption.vat}: <b className="text-gray-500">{data.vatNumber}</b>
             </Text>
           </Box>
         ))}
       </Box>
       <Box className="flex-[3] ml-0 md:ml-4 mt-4 md:mt-0">
         <div className="flex justify-between items-left md:items-center flex-col md:flex-row">
-          <Text variant="head2">Your Transactions</Text>
+          <Text variant="head2">{caption.yourTransactions}</Text>
           <Text className="font-bold flex">
-            <Image {...calendar} alt="period" className="mr-1" /> 20 - 30 March
-            2022
+            <Image {...calendar} alt="period" className="mr-1" />{" "}
+            {caption.periodTransaction}
           </Text>
         </div>
 
         <Text variant="caption" className="mt-4 block text-[10px] font-bold">
-          NEWEST
+          {caption.newest}
         </Text>
         <SpaceY />
         {transactionNewData.map(
@@ -197,7 +214,7 @@ const BillingInformation = () => {
                   <Text variant="head1">{purpose}</Text>
                   <Text variant="caption" className="font-bold text-xs">
                     {formatDate(date, `dd MMMM yyyy,`) +
-                      " at " +
+                      caption.at +
                       formatDate(date, `hh:mm aa`)}
                   </Text>
                 </div>
@@ -214,7 +231,7 @@ const BillingInformation = () => {
           )
         )}
         <Text variant="caption" className="mt-4 block text-[10px] font-bold">
-          YESTERDAY
+          {caption.yesterday}
         </Text>
         <SpaceY />
         {transactionYesterdayData.map(
@@ -233,7 +250,7 @@ const BillingInformation = () => {
                   <Text variant="head1">{purpose}</Text>
                   <Text variant="caption" className="font-bold text-xs">
                     {formatDate(date, `dd MMMM yyyy,`) +
-                      " at " +
+                      caption.at +
                       formatDate(date, `hh:mm aa`)}
                   </Text>
                 </div>
