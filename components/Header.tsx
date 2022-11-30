@@ -19,6 +19,7 @@ const adjustColorByVariant = (isSecondary: boolean, defaultColor: string) => {
 
 const caption = {
   pages: "Pages",
+  signIn: "Sign In",
 };
 
 const Header = ({
@@ -78,7 +79,8 @@ const Header = ({
             "gray-500"
           )} text-xs font-bold`}
         >
-          <Image className="mr-1" alt="account" {...personIcon} /> Sign In
+          <Image className="mr-1" alt="account" {...personIcon} />{" "}
+          <span className="hidden sm:flex">{caption.signIn}</span>
         </div>
         <div className="p-2 cursor-pointer">
           <Image alt="account" {...settingIcon} />
