@@ -4,6 +4,22 @@ import Box from "../Box";
 import GradientLine from "../GradientLine";
 import Text from "../Text";
 
+const caption = {
+  cardName: "Purity UI",
+  cardNumber: "7812 2312 3234 XXXX",
+  cardExp: "VALID THRU",
+  cardExpTime: "05/24",
+  cardCvv: "CVV",
+  cardCvvNum: "09X",
+
+  salary: "Salary",
+  salaryDesc: "Belong Interactive",
+  salaryAmount: 2000,
+  paypal: "Paypal",
+  paypalDesc: "Freelance Payment",
+  paypalAmount: 455,
+};
+
 const BillingPaymentInfo = () => {
   return (
     <div className="flex flex-col sm:flex-row">
@@ -16,7 +32,7 @@ const BillingPaymentInfo = () => {
             <div className="flex flex-col justify-between w-full">
               <div className="flex justify-between">
                 <Text variant="head2" className="text-[#fff]">
-                  Purity UI
+                  {caption.cardName}
                 </Text>
                 <Image
                   alt="card-logo"
@@ -28,21 +44,25 @@ const BillingPaymentInfo = () => {
 
               <div className="flex flex-col">
                 <Text variant="head2" className="text-[#fff]">
-                  7812 2312 3234 XXXX
+                  {caption.cardNumber}
                 </Text>
 
                 <div className="flex pt-2">
                   <div className="flex flex-col">
                     <Text variant="caption" className="text-[#fff] text-[10px]">
-                      VALID THRU
+                      {caption.cardExp}
                     </Text>
-                    <span className="text-[#fff] text-[14px]">05/24</span>
+                    <span className="text-[#fff] text-[14px]">
+                      {caption.cardExpTime}
+                    </span>
                   </div>
                   <div className="flex flex-col pl-8">
                     <Text variant="caption" className="text-[#fff] text-[10px]">
-                      CVV
+                      {caption.cardCvv}
                     </Text>
-                    <span className="text-[#fff] text-[14px]">09X</span>
+                    <span className="text-[#fff] text-[14px]">
+                      {caption.cardCvvNum}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -62,13 +82,13 @@ const BillingPaymentInfo = () => {
             />
           </Box>
           <Text variant="head2" className="mt-2">
-            Salary
+            {caption.salary}
           </Text>
           <Text variant="caption" className="text-xs font-bold">
-            Belong Interactive
+            {caption.salaryDesc}
           </Text>
           <GradientLine />
-          <Text variant="head2">+$2000</Text>
+          <Text variant="head2">+${caption.salaryAmount}</Text>
         </Box>
       </div>
       <div className="flex-[1] ml-0 sm:ml-4 mt-4 sm:mt-0 flex">
@@ -83,13 +103,13 @@ const BillingPaymentInfo = () => {
             />
           </Box>
           <Text variant="head2" className="mt-2">
-            Paypal
+            {caption.paypal}
           </Text>
           <Text variant="caption" className="text-xs font-bold">
-            Freelance Payment
+            {caption.paypalDesc}
           </Text>
           <GradientLine />
-          <Text variant="head2">+$455</Text>
+          <Text variant="head2">+${caption.paypalAmount}</Text>
         </Box>
       </div>
     </div>

@@ -52,6 +52,13 @@ const invoicesData = [
   },
 ];
 
+const caption = {
+  paymentMethod: "Payment Method",
+  addNewCard: "ADD A NEW CARD",
+  invoices: "Invoices",
+  viewAll: "VIEW ALL",
+};
+
 const BillingPayment = () => {
   return (
     <div className="flex flex-col md:flex-row">
@@ -63,13 +70,13 @@ const BillingPayment = () => {
           <Box className="mt-4">
             <div className="flex flex-col">
               <div className="flex items-center justify-between">
-                <Text variant="head1">Payment Method</Text>
+                <Text variant="head1">{caption.paymentMethod}</Text>
                 <button className="px-6 py-2 bg-chart-visit-gradient hover:opacity-80 hover:shadow-md">
                   <Text
                     className="text-[10px] font-bold text-[#fff]"
                     variant="caption"
                   >
-                    ADD A NEW CARD
+                    {caption.addNewCard}
                   </Text>
                 </button>
               </div>
@@ -121,14 +128,14 @@ const BillingPayment = () => {
       <div className="flex-[2] flex ml-0 md:ml-4 mt-4 md:mt-0">
         <Box>
           <div className="flex justify-between items-center">
-            <Text variant="head2">Invoices</Text>
+            <Text variant="head2">{caption.invoices}</Text>
             <button
               className="py-2 px-6 border-solid font-bold
             rounded-2xl border-2 border-secondary
             text-xs text-secondary hover:opacity-80
             hover:shadow-md"
             >
-              VIEW ALL
+              {caption.viewAll}
             </button>
           </div>
           <div className="flex flex-col">
