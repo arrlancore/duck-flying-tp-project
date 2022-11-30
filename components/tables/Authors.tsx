@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "../Box";
-import Table, { THead, TRender, TRow } from "../Table";
+import Table, { THead, TRender } from "../Table";
 import Image from "next/image";
 import Text from "../Text";
 import Link from "next/link";

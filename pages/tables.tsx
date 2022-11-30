@@ -5,12 +5,8 @@ import {
   DocumentationCTA,
   Footer,
   Header,
-  Hero,
   MainMenu,
   Projects,
-  ProjectsInfo,
-  Stats,
-  Summary,
 } from "../components";
 import { SpaceY } from "../components/Space";
 

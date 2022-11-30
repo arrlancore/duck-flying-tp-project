@@ -4,11 +4,7 @@ import {
   DocumentationCTA,
   Footer,
   Header,
-  Hero,
   MainMenu,
-  ProjectsInfo,
-  Stats,
-  Summary,
 } from "../../components";
 import Box from "../../components/Box";
 import { SpaceY } from "../../components/Space";

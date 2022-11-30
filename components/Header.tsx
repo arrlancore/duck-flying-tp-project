@@ -1,10 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import {
-  config,
   notifications,
   notificationsWhite,
-  person,
   personGrey,
   personWhite,
   search,

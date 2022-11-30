@@ -28,7 +28,7 @@ const tableRenderers: TRender<ProjectDataTable> = {
   },
   budget: (value) => {
     const formatter = (n: number) => new Intl.NumberFormat().format(n);
-    return <div>{!!value ? `$${formatter(value as number)}` : "Not Set"}</div>;
+    return <div>{value ? `$${formatter(value as number)}` : "Not Set"}</div>;
   },
   completion: (value) => (
     <div className="flex flex-col">

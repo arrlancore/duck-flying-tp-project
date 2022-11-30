@@ -1,10 +1,4 @@
-import Image from "next/image";
 import React, { HTMLAttributes } from "react";
-
-type IconUrl = string;
-type IconWidth = number;
-type IconHeight = number;
-type IconProperty = [IconUrl, IconWidth, IconHeight];
 
 type Props = HTMLAttributes<HTMLInputElement> & {
   iconLeft?: JSX.Element;
