@@ -41,78 +41,103 @@ const conversationsData = [
   },
 ];
 
+const caption = {
+  platformSettings: "Platform Settings",
+  account: "Account",
+  accountConf1: "Email me when someone follows me",
+  accountConf2: "Email me when someone answers on my post",
+  accountConf3: "Email me when someone mentions me",
+  application: "Application",
+  applicationConf1: "New launches and projects",
+  applicationConf2: "Monthly product updates",
+  applicationConf3: "Subscribe to newsletter",
+
+  profileInformation: "Profile Information",
+  profileBio: `Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is
+  no. If two equally difficult paths, choose the one more painful in the
+  short term (pain avoidance is creating an illusion of equality).`,
+  name: "Full Name",
+  profileName: "Alec M. Thompson",
+  mobile: "Mobile",
+  profileMobile: "(44) 123 123 123",
+  email: "Email",
+  profileEmail: "alecm@simple.com",
+  location: "Location",
+  profileLocation: "United States",
+  socialMedia: "Social Media",
+
+  conversation: "Conversations",
+  reply: "Reply",
+};
+
 const ProfileInfo = () => {
   return (
     <div className="flex flex-col md:flex-row">
       <Box className="flex-[1]">
-        <Text variant="head2">Platform Settings</Text>
+        <Text variant="head2">{caption.platformSettings}</Text>
         <Text
           variant="caption"
           className="block text-[10px] mt-2 font-bold uppercase"
         >
-          Account
+          {caption.account}
         </Text>
         <Toggle
           className="mt-4 mb-2"
           defaultChecked={true}
-          label="Email me when someone follows me"
+          label={caption.accountConf1}
         />
         <Toggle
           className="my-2"
           defaultChecked={false}
-          label="Email me when someone answers on my post"
+          label={caption.accountConf2}
         />
         <Toggle
           className="my-2"
           defaultChecked={true}
-          label="Email me when someone mentions me"
+          label={caption.accountConf3}
         />
 
         <Text
           variant="caption"
           className="block text-[10px] mt-4 font-bold uppercase"
         >
-          Application
+          {caption.application}
         </Text>
         <Toggle
           className="mt-4 mb-2"
           defaultChecked={true}
-          label="New launches and projects"
+          label={caption.applicationConf1}
         />
         <Toggle
           className="my-2"
           defaultChecked={false}
-          label="Monthly product updates"
+          label={caption.applicationConf2}
         />
         <Toggle
           className="my-2"
           defaultChecked={true}
-          label="Subscribe to newsletter"
+          label={caption.applicationConf3}
         />
       </Box>
 
       <Box className="flex-[1] ml-0 md:ml-4 mt-4 md:mt-0">
-        <Text variant="head2">Profile Information</Text>
-        <Text className="mt-4">
-          Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is
-          no. If two equally difficult paths, choose the one more painful in the
-          short term (pain avoidance is creating an illusion of equality).
-        </Text>
+        <Text variant="head2">{caption.profileInformation}</Text>
+        <Text className="mt-4">{caption.profileBio}</Text>
         <GradientLine className="my-4" />
         <Text variant="caption" className="block my-4">
-          <b>Full Name:</b> Alec M. Thompson
+          <b>{caption.name}:</b> {caption.profileName}
         </Text>
         <Text variant="caption" className="block my-4">
-          <b>Mobile:</b> (44) 123 123 123
+          <b>{caption.mobile}:</b> {caption.profileMobile}
         </Text>
         <Text variant="caption" className="block my-4">
-          <b>Email:</b> alecm@simple.com
+          <b>{caption.email}:</b> {caption.profileEmail}
         </Text>
         <Text variant="caption" className="block my-4">
-          <b>Location:</b> United States
+          <b>{caption.location}:</b> {caption.profileLocation}
         </Text>
         <Text variant="caption" className="flex items-center my-4">
-          <b>Social Media:</b>{" "}
+          <b>{caption.socialMedia}:</b>{" "}
           <Link href="#">
             <Image {...facebook} alt="facebook" className="ml-4"></Image>
           </Link>
@@ -126,7 +151,7 @@ const ProfileInfo = () => {
       </Box>
 
       <Box className="flex-[1] ml-0 md:ml-4 mt-4 md:mt-0">
-        <Text variant="head2">Conversations</Text>
+        <Text variant="head2">{caption.conversation}</Text>
         <SpaceY />
         {conversationsData.map(({ id, name, message, profilePictureUrl }) => (
           <div key={id} className="flex justify-between items-center">
@@ -149,7 +174,7 @@ const ProfileInfo = () => {
               href="#"
               className="text-secondary uppercase text-[10px] font-bold"
             >
-              Reply
+              {caption.reply}
             </Link>
           </div>
         ))}

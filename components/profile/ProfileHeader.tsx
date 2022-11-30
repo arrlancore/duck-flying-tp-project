@@ -10,6 +10,12 @@ import { profilePict } from "../../src/assets/images";
 import Box from "../Box";
 import Text from "../Text";
 
+const caption = {
+  overview: "overview",
+  teams: "teams",
+  project: "project",
+};
+
 const ProfileHeader = () => {
   return (
     <div className="w-full z-10 mt-[60px] sm:mt-[132px]">
@@ -48,14 +54,14 @@ const ProfileHeader = () => {
                 className="mr-1 min-w-[12px]"
                 {...overview}
               />
-              overview
+              {caption.overview}
             </button>
             <button
               className="flex items-center px-4 py-2 uppercase text-xs
              font-bold text-gray-700 ml-4"
             >
               <Image alt="overview" className="mr-1 min-w-[12px]" {...teams} />
-              teams
+              {caption.teams}
             </button>
             <button
               className="flex items-center px-4 py-2 uppercase text-xs
@@ -66,7 +72,7 @@ const ProfileHeader = () => {
                 className="mr-1 min-w-[12px]"
                 {...projectsConfig}
               />
-              project
+              {caption.project}
             </button>
           </div>
         </div>

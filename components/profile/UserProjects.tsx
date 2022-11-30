@@ -41,11 +41,18 @@ const projectsData = [
   },
 ];
 
+const caption = {
+  projects: "Projects",
+  projectsDesc: "Architects design houses",
+  addNewProject: "Create a New Project",
+  viewAll: "VIEW ALL",
+};
+
 const UserProjects = () => {
   return (
     <Box>
-      <Text variant="head2">Projects</Text>
-      <Text variant="caption">Architects design houses</Text>
+      <Text variant="head2">{caption.projects}</Text>
+      <Text variant="caption">{caption.projectsDesc}</Text>
       <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
         {projectsData.map(({ id, projectName, description, img, members }) => (
           <div key={id} className="flex flex-col mt-2">
@@ -72,7 +79,7 @@ const UserProjects = () => {
             text-xs text-secondary hover:opacity-80
             hover:shadow-md"
               >
-                VIEW ALL
+                {caption.viewAll}
               </button>
               <div className="flex relative left-[8px]">
                 {members.map((src, idx) => (
@@ -99,7 +106,7 @@ const UserProjects = () => {
           <div className="flex flex-col items-center">
             <Image alt="add" {...add} />
             <Text variant="head2" className="mt-2 text-[#718096]">
-              Create a New Project
+              {caption.addNewProject}
             </Text>
           </div>
         </div>
