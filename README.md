@@ -1,6 +1,6 @@
 # Nextjs Tailwind Dashboard Project
 
-A [Next.js](https://nextjs.org/) project with [Tailwind](https://tailwindcss.com/) for styling it
+A [Next.js](https://nextjs.org/) project with [Tailwind](https://tailwindcss.com/) for styling and powered by TypeScript
 
 
 ### Prerequisites
